@@ -422,11 +422,9 @@ function scan_btn1(buttonID,showDataDivID)
 													}
 											
 											else {
-												$(divID).css("color", "blue");
-												var x = document.getElementById(b_id);
-												$(b_id).text("Done");
-												$(b_id).css("background-color", "#5398CD");
-												 $(b_id).prop('disabled',true);
+												var d='<img src="images/check.svg" id="checkButton" title="Already Done">';
+												  document.getElementById("firstscan").innerHTML =d;
+												  document.getElementById("yesnona").style.cursor = "none";
 												$(disableDivID).attr('readonly', true);
 												detailsRegistered();
 												getLocation(showDataDivID);
@@ -2175,7 +2173,7 @@ function photo_btn32(buttonID,showDataDivID,img)
 }
 
 body {
-	overflow: none;
+		overflow: hidden;
 	background-color: red;
 }
 
@@ -2222,6 +2220,15 @@ textarea {
 	margin: 4px 2px;
 	cursor: pointer;
 }
+
+#checkButton{
+	display: inline-block;
+	margin: 4px 10px;
+	height: 56px;
+	padding-left: 0px;
+	box-shadow: 3px solid red;
+}
+
 
 .scanButton :hover {
 	background-color: red; /* Green */
@@ -2483,7 +2490,7 @@ function pictureSaved() {
 							</div>
 						</div>
 						<div class="col-sm-6">
-							<div class="col-sm-4">
+							<div class="col-sm-4" >
 
 								<button type="button" id="photoButton1" class="iconButton"
 									onclick=photo_btn1("photoButton1","pic1_Loc","image1");
@@ -2493,14 +2500,14 @@ function pictureSaved() {
 								</button>
 
 							</div>
-							<div class="col-sm-4">
+							<div class="col-sm-4"  id="done">
 								<button type="button" id="commentButton1" class="iconButton"
 									onclick=addComment("commentButton1");>
 									<img src="images/commenticon.png"
 										style="height: 50px; width: 50px" />
 								</button>
 							</div>
-							<div class="col-sm-4">
+							<div class="col-sm-4" id="firstscan">
 								<button type="button" id="scanData1" class="iconButton"
 									onclick=scan_btn1("scanData1","hide1");>
 									<img src="images/scanicon.png" id="scanImage" />
@@ -3433,6 +3440,15 @@ function pictureSaved() {
 			</center>
 		</div>
 	</div>
+	
+	<script>
+var d='<img src="images/check.svg" id="checkButton" title="Already Done">';
+
+function cmntbnt(){
+	  document.getElementById("done").innerHTML =d;	  
+}
+</script>
+
 	<script>
 var modal = document.getElementById('myModal');
 var btn = document.getElementById("myBtn");
@@ -3442,7 +3458,7 @@ function addComment(buttonID) {
 }
 function closePopup()
 {
-popupText
+	cmntbnt();
 document.getElementById("popupText").value = "";
   modal.style.display = "none";
 }
