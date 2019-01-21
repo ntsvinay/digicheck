@@ -1,0 +1,122 @@
+
+<html>
+<head>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+
+/* Style the tab */
+.tab {
+    float: left;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+	width: 20%;
+    
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    display: block;
+    background-color: inherit;
+    color: black;
+    padding: 22px 16px;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    float: left;
+    padding: 0px 12px;
+   // border: 1px solid #ccc;
+    width: 80%;
+    border-left: none;
+   
+}
+#alertheading{
+font-size:30px;
+font-weight:bold;
+font-family:times new roman
+}
+#lowerheading{
+font-size:15px;
+font-weight:bold;
+margin-top:10px;
+}
+#selectiondrop{
+background-color:#C2E6F7;
+width:70px;
+}
+#nameheading{
+font-size:20px;
+font-weight:bold;
+}
+#nornalFont{
+font-size:20px;
+}
+.form-control{
+height:40px;
+}
+#mainDiv{
+box-shadow:3px 5px;
+}
+</style>
+</head>
+<body style="background-color: #F1F7F7">
+<div class="col-sm-3"></div>
+<div class="col-sm-6" style="margin-top:10%; border:1px solid black; padding: 10px; border-radius: 25px;" id="mainDiv">
+<div class="form-group">
+<center><img src="images/logo.png" style=" height:80px;"></center>
+<div class="row" style="padding-left: 40px; padding-right: 40px; padding-top: 0px; padding-botton: 0px;">
+<div><b id="nornalFont">User Name</b></div>
+<div><input type="text" class="form-control" id="userid" placeholder="User id" name="name"  style="font-size:20px;" /></div>
+</div>
+</div>
+<br>
+<div class="form-group">
+<div class="row" style="padding-left: 40px; padding-right: 40px; padding-top: 0px; padding-botton: 0px;">
+<div id="nornalFont"><b>Password</b></div>
+<div><input type="password" class="form-control" id="pass" placeholder="Password" name="pass" style="font-size:20px;" /></div>
+</div>
+</div>
+<div class="align-center" style="padding-bottom:10px">
+<center><a href="#">
+<button type="button" class="btn btn-info" style="color:black; font-weight:bold" id="nornalFont">Login</button>
+<button type="button" class="btn btn-info" style="color:black; font-weight:bold" onclick="scanActive()" id="nornalFont">Scan</button>
+</a></center>
+</div>
+<div class="col-sm-12" id="placeThumb" style="height:25px">
+
+</div>
+</div>
+<div class="col-sm-3"></div>
+</body>
+<script>
+function scanActive()
+{
+document.getElementById("placeThumb").innerHTML = '<p style="color:blue; font-size:15px; text-align:center; font-weight:bold;">Place your thumb on scanner</p>';
+}
+</script>
+</html>

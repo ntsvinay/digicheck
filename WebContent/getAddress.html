@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Today Weather Condition</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script>
+function dateUpdate()
+{
+document.getElementById('getDateID').innerHTML = Date().slice(0,15);
+}
+</script>
+</head>
+<style>
+.getData{
+color:green;
+font-size:15px;
+}
+#cityName{
+color:black;
+font-size:20px;
+}
+</style>
+<body style="background-color: #AED6F1" onload="dateUpdate()">
+<div class="col-sm-12" ><center style="font-size:30px; color:green; font-weight:bold;">TODAY WEATHER</center></div>
+<div class="col-sm-12"><center id="getDateID" style="font-size:25px; color:red; font-weight:bold;"></center></div>
+<div class="col-sm-12">
+<div class="col-sm-6">
+<center>
+<div class="col-sm-12"><center style="color:green; font-weight:bold;font-size:25px;">India Weather</center><hr></div>
+<div id="delhi" class="getData"><p id="cityName">New Delhi</p></div>
+</div>
+    <script>
+	function getAddress(value)
+	{
+	//var value='28.3547477,78.2669231';
+	$.getJSON('https://maps.googleapis.com/maps/api/geocode/json?latlng='+value+'&key=AIzaSyAIPnZaEeFngR7L7e1JV1Z62hm-0BWNooU&libraries=places', function(data) {
+		       
+	   var text = `${data.plus_code.compound_code}`
+	  // var text0 = `${data.results[0].address_components[0].long_name}`
+	   var text1 = `${data.results[1].address_components[0].long_name}`
+	   var text2 = `${data.results[2].address_components[0].long_name}`
+	   var text3 = `${data.results[3].address_components[0].long_name}`
+	   var text4 = `${data.results[4].address_components[0].long_name}`
+	   //var text5 = `${data.results[5].address_components[0].long_name}`
+	  // alert(text3);
+	  // alert("this si s");
+		document.getElementById("delhi").innerHTML +=text1+','+text2+','+text3+','+text4;
+		
+					
+    });
+	}
+    </script>
+	<script>
+	function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function(pos) {
+    //You have your locaton here
+      console.log("Latitude: " + pos.coords.latitude +
+        "Longitude: " + pos.coords.longitude);
+		var value=pos.coords.latitude+','+pos.coords.longitude;
+		getAddress(value);
+		//document.getElementById(divID).innerHTML = deg_to_dmslatitude(pos.coords.latitude)+" <br>"+deg_to_dmslongitude(pos.coords.longitude);
+
+    });
+  } else {
+    console.log("Geolocation is not supported by this browser.");
+  }
+}
+	</script>
+<button onclick="getLocation()";>click</button>	
+</body>
+</html>
