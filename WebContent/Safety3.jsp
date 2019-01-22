@@ -3458,6 +3458,7 @@ function addComment(buttonID) {
 }
 function closePopup()
 {
+	
 	cmntbnt();
 document.getElementById("popupText").value = "";
   modal.style.display = "none";
