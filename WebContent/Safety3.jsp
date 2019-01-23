@@ -1885,8 +1885,8 @@ var divID;
 function photo_btn1(buttonID,showDataDivID,img)
 {
 	var queryString = '?xmlData='+'1.1';
-	var url="snapshot.html" + queryString;
-	newWindow=window.open(url,'html','name','height=800,width=800');
+	var url="snapshot.jsp" + queryString;
+	newWindow=window.open(url,'jsp','name','height=800,width=800');
 	
 	var disableDivID="#"+buttonID+"DisableDiv"+" :input";
 	divID="#"+showDataDivID;
@@ -1910,19 +1910,22 @@ var divID;
 function photo_btn2(buttonID,showDataDivID,img)
 {
 	////(buttonID+" "+showDataDivID+" "+img);
-	
-	
-	
 	var queryString = '?xmlData='+'1.2';
-	var url="snapshot.html" + queryString;
-	newWindow=window.open(url,'html','name','height=800,width=800');
+	var url="snapshot.jsp" + queryString;
+	newWindow=window.open(url,'jsp','name','height=800,width=800');
 	
 	var disableDivID="#"+buttonID+"DisableDiv"+" :input";
 	divID="#"+showDataDivID;
 	b_id="#"+buttonID;
 						$(divID).css("color", "blue");
 						//document.getElementById(divID).style.color = "blue";
-						
+						$
+						.get(
+								"Image_btn2",
+								function(responseText) {
+									$(divID).text(responseText);
+									
+								});
 						}
 </script>
 <script>
@@ -1932,8 +1935,8 @@ function photo_btn3(buttonID,showDataDivID,img)
 {
 	////(buttonID+" "+showDataDivID+" "+img);
 	var queryString = '?xmlData='+'1.3';
-	var url="snapshot.html" + queryString;
-	newWindow=window.open(url,'html','name','height=800,width=800');
+	var url="snapshot.jsp" + queryString;
+	newWindow=window.open(url,'jsp','name','height=800,width=800');
 	
 	var disableDivID="#"+buttonID+"DisableDiv"+" :input";
 	divID="#"+showDataDivID;
@@ -1942,8 +1945,13 @@ function photo_btn3(buttonID,showDataDivID,img)
 						//$(divID).text("please confirm image");
 						$(divID).css("color", "blue");
 						//document.getElementById(divID).style.color = "blue";
-						
-						
+						$
+						.get(
+								"Image_btn3",
+								function(responseText) {
+									$(divID).text(responseText);
+									
+								});
 						}
 </script>
 <script>
@@ -1954,9 +1962,14 @@ function photo_btn4(buttonID,showDataDivID,img)
 {
 	////(buttonID+" "+showDataDivID+" "+img);
 	var queryString = '?xmlData='+'2.1';
+<<<<<<< HEAD
 	camerabuttonId =(buttonID);
 	var url="snapshot.html" + queryString;
 	newWindow=window.open(url,'html','name','height=800,width=800');
+=======
+	var url="snapshot.jsp" + queryString;
+	newWindow=window.open(url,'jsp','name','height=800,width=800');
+>>>>>>> 453f3a0343803a21e0ca0d068deaf3ff70696bf6
 	
 	var disableDivID="#"+buttonID+"DisableDiv"+" :input";
 	divID="#"+showDataDivID;
@@ -1965,8 +1978,18 @@ function photo_btn4(buttonID,showDataDivID,img)
 						//$(divID).text("please confirm image");
 						$(divID).css("color", "blue");
 						//document.getElementById(divID).style.color = "blue";
+<<<<<<< HEAD
 						
 						
+=======
+						$
+						.get(
+								"Image_btn4",
+								function(responseText) {
+									$(divID).text(responseText);
+									
+								});
+>>>>>>> 453f3a0343803a21e0ca0d068deaf3ff70696bf6
 						}
 </script>
 <script>
@@ -1977,8 +2000,8 @@ function photo_btn5(buttonID,showDataDivID,img)
 	////(buttonID+" "+showDataDivID+" "+img);
 	
 	var queryString = '?xmlData='+'2.2';
-	var url="snapshot.html" + queryString;
-	newWindow=window.open(url,'html','name','height=800,width=800');
+	var url="snapshot.jsp" + queryString;
+	newWindow=window.open(url,'jsp','name','height=800,width=800');
 	
 	var disableDivID="#"+buttonID+"DisableDiv"+" :input";
 	divID="#"+showDataDivID;
@@ -1987,7 +2010,13 @@ function photo_btn5(buttonID,showDataDivID,img)
 						//$(divID).text("please confirm image");
 						$(divID).css("color", "blue");
 						//document.getElementById(divID).style.color = "blue";
-						
+						$
+						.get(
+								"Image_btn5",
+								function(responseText) {
+									$(divID).text(responseText);
+									
+								});
 						}
 </script>
 <script>
@@ -1997,8 +2026,8 @@ function photo_btn6(buttonID,showDataDivID,img)
 {
 	////(buttonID+" "+showDataDivID+" "+img);
 	var queryString = '?xmlData='+'2.3';
-	var url="snapshot.html" + queryString;
-	newWindow=window.open(url,'html','name','height=800,width=800');
+	var url="snapshot.jsp" + queryString;
+	newWindow=window.open(url,'jsp','name','height=800,width=800');
 	
 	var disableDivID="#"+buttonID+"DisableDiv"+" :input";
 	divID="#"+showDataDivID;
@@ -2007,7 +2036,13 @@ function photo_btn6(buttonID,showDataDivID,img)
 						//$(divID).text("please confirm image");
 						$(divID).css("color", "blue");
 						//document.getElementById(divID).style.color = "blue";
-					
+						$
+						.get(
+								"Image_btn6",
+								function(responseText) {
+									$(divID).text(responseText);
+									
+								});
 						}
 </script>
 <script>
@@ -2017,8 +2052,8 @@ function photo_btn7(buttonID,showDataDivID,img)
 {
 	////(buttonID+" "+showDataDivID+" "+img);
 	var queryString = '?xmlData='+'3.1';
-	var url="snapshot.html" + queryString;
-	newWindow=window.open(url,'html','name','height=800,width=800');
+	var url="snapshot.jsp" + queryString;
+	newWindow=window.open(url,'jsp','name','height=800,width=800');
 	
 	var disableDivID="#"+buttonID+"DisableDiv"+" :input";
 	divID="#"+showDataDivID;
@@ -2027,7 +2062,13 @@ function photo_btn7(buttonID,showDataDivID,img)
 						//$(divID).text("please confirm image");
 						$(divID).css("color", "blue");
 						//document.getElementById(divID).style.color = "blue";
-						
+						$
+						.get(
+								"Image_btn7",
+								function(responseText) {
+									$(divID).text(responseText);
+									
+								});
 						}
 </script>
 <script>
@@ -2035,9 +2076,6 @@ var b_id;
 var divID;
 function photo_btn8(buttonID,showDataDivID,img)
 {
-	var queryString = '?xmlData='+'3.2';
-	var url="snapshot.html" + queryString;
-	newWindow=window.open(url,'html','name','height=800,width=800');
 	//(buttonID+" "+showDataDivID+" "+img);
 	var disableDivID="#"+buttonID+"DisableDiv"+" :input";
 	divID="#"+showDataDivID;
@@ -2046,7 +2084,13 @@ function photo_btn8(buttonID,showDataDivID,img)
 						//$(divID).text("please confirm image");
 						$(divID).css("color", "blue");
 						//document.getElementById(divID).style.color = "blue";
-						
+						$
+						.get(
+								"Image_btn8",
+								function(responseText) {
+									$(divID).text(responseText);
+									
+								});
 						}
 </script>
 <script>
@@ -2054,11 +2098,6 @@ var b_id;
 var divID;
 function photo_btn9(buttonID,showDataDivID,img)
 {
-	
-	
-	var queryString = '?xmlData='+'4.1';
-	var url="snapshot.html" + queryString;
-	newWindow=window.open(url,'html','name','height=800,width=800');
 	////(buttonID+" "+showDataDivID+" "+img);
 	var disableDivID="#"+buttonID+"DisableDiv"+" :input";
 	divID="#"+showDataDivID;
@@ -2081,9 +2120,6 @@ var b_id;
 var divID;
 function photo_btn10(buttonID,showDataDivID,img)
 {
-	var queryString = '?xmlData='+'4.2';
-	var url="snapshot.html" + queryString;
-	newWindow=window.open(url,'html','name','height=800,width=800');
 	////(buttonID+" "+showDataDivID+" "+img);
 	var disableDivID="#"+buttonID+"DisableDiv"+" :input";
 	divID="#"+showDataDivID;
@@ -2092,7 +2128,13 @@ function photo_btn10(buttonID,showDataDivID,img)
 						$(divID).text("please confirm image");
 						$(divID).css("color", "blue");
 						//document.getElementById(divID).style.color = "blue";
-						
+						$
+						.get(
+								"Image_btn10",
+								function(responseText) {
+									$(divID).text(responseText);
+									
+								});
 						}
 </script>
 <script>
@@ -2100,9 +2142,6 @@ var b_id;
 var divID;
 function photo_btn31(buttonID,showDataDivID,img)
 {
-	var queryString = '?xmlData='+'5.1';
-	var url="snapshot.html" + queryString;
-	newWindow=window.open(url,'html','name','height=800,width=800');
 	////(buttonID+" "+showDataDivID+" "+img);
 	var disableDivID="#"+buttonID+"DisableDiv"+" :input";
 	divID="#"+showDataDivID;
@@ -2111,7 +2150,13 @@ function photo_btn31(buttonID,showDataDivID,img)
 						//$(divID).text("please confirm image");
 						$(divID).css("color", "blue");
 						//document.getElementById(divID).style.color = "blue";
-						
+						$
+						.get(
+								"Image_btn31",
+								function(responseText) {
+									$(divID).text(responseText);
+									
+								});
 						}
 </script>
 <script>
@@ -2120,10 +2165,6 @@ var divID;
 function photo_btn32(buttonID,showDataDivID,img)
 {
 	////(buttonID+" "+showDataDivID+" "+img);
-	
-	var queryString = '?xmlData='+'5.2';
-	var url="snapshot.html" + queryString;
-	newWindow=window.open(url,'html','name','height=800,width=800');
 	var disableDivID="#"+buttonID+"DisableDiv"+" :input";
 	divID="#"+showDataDivID;
 	b_id="#"+buttonID;
