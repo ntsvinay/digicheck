@@ -2520,9 +2520,20 @@ function pictureSaved() {
 						<img src="images/home.png" height="50px" width:50px />
 					</button></a>
 			</div>
+			<div class="col-sm-8">
 			<center>
 				<h1>SAF-05 ENCLOSED SPACE ENTRY PERMIT</h1>
 			</center>
+			</div>
+			<div class="col-sm-2">
+			<div class="col-sm-2">
+				<a href="#"><button type="button"
+						style="margin-top: 10px; font-size: 20px; font-weight: bold; color: black;"
+						class="iconButton">
+						<img src="images/save.png" height="50px" width:50px />
+					</button></a>
+			</div>
+			</div>
 		</div>
 
 		<div class="col-sm-12" id="scrolabbleDiv"
