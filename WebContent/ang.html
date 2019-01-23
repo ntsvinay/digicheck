@@ -1,0 +1,32 @@
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script type="text/javascript">
+        var app = angular.module('MyApp', [])
+        app.controller('MyController', function ($scope) {
+            //Initialize the value to Blank.
+            $scope.PassportNumber = "";
+			$scope.PassportNumber1 = "";
+            //This will disable the Button by default.
+            $scope.IsDisabled = true;
+ 
+            $scope.EnableDisable = function () {
+                //If TextBox has value, the Button will be enabled else vice versa.
+                $scope.IsDisabled = $scope.PassportNumber.length == 0;
+				$scope.IsDisabled = $scope.PassportNumber1.length == 0;
+            }
+        });
+    </script>
+    <div ng-app="MyApp" ng-controller="MyController">
+        Passport Number1:
+        <input type="text" id="txtPassportNumber" ng-model="PassportNumber" ng-keyup = "EnableDisable()" />
+		Passport Number2:
+        <input type="text" id="txtPassportNumber" ng-model="PassportNumber1" ng-keyup = "EnableDisable()" />
+        <hr />
+        <input type="button" value = "Submit" ng-disabled="IsDisabled" />
+    </div>
+</body>
+</html>

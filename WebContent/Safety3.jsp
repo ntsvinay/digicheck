@@ -416,26 +416,40 @@ function scan_btn1(buttonID,showDataDivID)
 						$(divID).text("Place your thumb on the sensor");
 						$(divID).css("color", "blue");
 						//document.getElementById(divID).style.color = "blue";
+																		 $(b_id).prop('disabled',true);
+
 						$
 							    .get(
 										"Scan_btn1",
 										function(responseText) {
 											$(divID).text(responseText);
 											if ('unsuccessful...! try again' == responseText) {
+												 $(b_id).prop('disabled',false);
+
 												$(divID).css("color", "red");
 												tryAgain();
 
 											} 
 											else if('Sorry You are Not Authorised for this :('==responseText)
 													{
+												 $(b_id).prop('disabled',false);
+
 												$(divID).css("color", "red");
 												notautharised();
 													}
 											
 											else {
+<<<<<<< HEAD
 												var d='<img src="images/check.svg" id="checkButton" title="Already Done">';
 												  document.getElementById("scanbtndiv").innerHTML =d;
 												 var rdo1=document.getElementById("radiofirst");
+=======
+												$(divID).css("color", "blue");
+												var x = document.getElementById(b_id);
+												$(b_id).text("Done");
+												$(b_id).css("background-color", "#5398CD");
+												 $(b_id).prop('disabled',true);
+>>>>>>> d0656ccb2a4fb75db258046e6a505d394a5b82b0
 												$(disableDivID).attr('readonly', true);
 												detailsRegistered();
 												alert(rdo1);
@@ -460,6 +474,8 @@ function scan_btn2(buttonID,showDataDivID)
 	  
 						$(divID).text("Place your thumb on the sensor");
 						$(divID).css("color", "blue");
+						 $(b_id).prop('disabled',true);
+
 						//document.getElementById(divID).style.color = "blue";
 						$
 								.get(
@@ -467,22 +483,28 @@ function scan_btn2(buttonID,showDataDivID)
 										function(responseText) {
 											$(divID).text(responseText);
 											if ('unsuccessful...! try again' == responseText) {
+												 $(b_id).prop('disabled',false);
+
 												$(divID).css("color", "red");
 												tryAgain();
 
 											} 
 											else if('Sorry You are Not Authorised for this :('==responseText)
 													{
+												 $(b_id).prop('disabled',false);
+
 												$(divID).css("color", "red");
 												notautharised();
 													}
 											
 											else {
-												var d='<img src="images/check.svg" id="checkButton" title="Already Done">';
-												  document.getElementById("scanbtndiv2").innerHTML =d;
+												$(divID).css("color", "blue");
+												var x = document.getElementById(b_id);
+												$(b_id).text("Done");
+												$(b_id).css("background-color", "#5398CD");
+												 $(b_id).prop('disabled',true);
 													$(disableDivID).attr('readonly', true);
 													detailsRegistered();
-													getLocation(showDataDivID);
 											}
 										});
 						}
@@ -500,6 +522,8 @@ function scan_btn3(buttonID,showDataDivID)
 	  
 						$(divID).text("Place your thumb on the sensor");
 						$(divID).css("color", "blue");
+						 $(b_id).prop('disabled',true);
+
 						//document.getElementById(divID).style.color = "blue";
 						$
 								.get(
@@ -513,17 +537,24 @@ function scan_btn3(buttonID,showDataDivID)
 											} 
 											else if('Sorry You are Not Authorised for this :('==responseText)
 													{
+												 $(b_id).prop('disabled',false);
+
 												$(divID).css("color", "red");
 												notautharised();
 													}
 											
 											else {
-												var d='<img src="images/check.svg" id="checkButton" title="Already Done">';
-												  document.getElementById("scanbtndiv3").innerHTML =d;
+												 $(b_id).prop('disabled',false);
+
+												$(divID).css("color", "blue");
+												var x = document.getElementById(b_id);
+												$(b_id).text("Done");
+												$(b_id).css("background-color", "#5398CD");
 												 $(b_id).prop('disabled',true);
+												 
 													$(disableDivID).attr('readonly', true);
+												
 													detailsRegistered();
-													getLocation(showDataDivID);
 											}
 										});						}
 </script>
@@ -540,6 +571,8 @@ function scan_btn4(buttonID,showDataDivID)
 	  
 						$(divID).text("Place your thumb on the sensor");
 						$(divID).css("color", "blue");
+						 $(b_id).prop('disabled',true);
+
 						//document.getElementById(divID).style.color = "blue";
 						$
 								.get(
@@ -547,21 +580,32 @@ function scan_btn4(buttonID,showDataDivID)
 										function(responseText) {
 											$(divID).text(responseText);
 											if ('unsuccessful...! try again' == responseText) {
+												 $(b_id).prop('disabled',false);
+
 												$(divID).css("color", "red");
 												tryAgain();
 
 											} 
 											else if('Sorry You are Not Authorised for this :('==responseText)
 													{
+												 $(b_id).prop('disabled',false);
+
 												$(divID).css("color", "red");
 												notautharised();
 													}
 											
 											else {
+<<<<<<< HEAD
 												var d='<img src="images/check.svg" id="checkButton" title="Already Done">';
 												  document.getElementById("scanbtndiv4").innerHTML =d;
 												  getLocation(showDataDivID);
 												  detailsRegistered();
+=======
+												$(divID).css("color", "blue");
+												var x = document.getElementById(b_id);
+												$(b_id).text("Done");
+												$(b_id).css("background-color", "#5398CD");
+>>>>>>> d0656ccb2a4fb75db258046e6a505d394a5b82b0
 												$(disableDivID).attr('readonly', true);
 											}
 										});
@@ -581,6 +625,8 @@ function scan_btn5(buttonID,showDataDivID)
 	  
 						$(divID).text("Place your thumb on the sensor");
 						$(divID).css("color", "blue");
+						 $(b_id).prop('disabled',true);
+
 						//document.getElementById(divID).style.color = "blue";
 						$
 								.get(
@@ -588,11 +634,15 @@ function scan_btn5(buttonID,showDataDivID)
 										function(responseText) {
 											$(divID).text(responseText);
 											if ('unsuccessful...! try again' == responseText) {
+												 $(b_id).prop('disabled',false);
+
 												$(divID).css("color", "red");
 												tryAgain();
 											} 
 											else if('Sorry You are Not Authorised for this :('==responseText)
 													{
+												 $(b_id).prop('disabled',false);
+
 												$(divID).css("color", "red");
 													}
 											
@@ -619,6 +669,8 @@ function scan_btn6(buttonID,showDataDivID)
 	  
 						$(divID).text("Place your thumb on the sensor");
 						$(divID).css("color", "blue");
+						 $(b_id).prop('disabled',true);
+
 						//document.getElementById(divID).style.color = "blue";
 						$
 								.get(
@@ -626,11 +678,15 @@ function scan_btn6(buttonID,showDataDivID)
 										function(responseText) {
 											$(divID).text(responseText);
 											if ('unsuccessful...! try again' == responseText) {
+												 $(b_id).prop('disabled',false);
+
 												$(divID).css("color", "red");
 												tryAgain();
 											} 
 											else if('Sorry You are Not Authorised for this :('==responseText)
 													{
+												 $(b_id).prop('disabled',false);
+
 												$(divID).css("color", "red");
 													}
 											
@@ -658,6 +714,8 @@ function scan_btn7(buttonID,showDataDivID)
 	  
 						$(divID).text("Place your thumb on the sensor");
 						$(divID).css("color", "blue");
+						 $(b_id).prop('disabled',true);
+
 						//document.getElementById(divID).style.color = "blue";
 						$
 								.get(
@@ -665,11 +723,15 @@ function scan_btn7(buttonID,showDataDivID)
 										function(responseText) {
 											$(divID).text(responseText);
 											if ('unsuccessful...! try again' == responseText) {
+												 $(b_id).prop('disabled',false);
+
 												$(divID).css("color", "red");
 												tryAgain();
 											} 
 											else if('Sorry You are Not Authorised for this :('==responseText)
 													{
+												 $(b_id).prop('disabled',false);
+
 												$(divID).css("color", "red");
 													}
 											
@@ -697,6 +759,8 @@ function scan_btn8(buttonID,showDataDivID)
 	  
 						$(divID).text("Place your thumb on the sensor");
 						$(divID).css("color", "blue");
+						 $(b_id).prop('disabled',true);
+
 						//document.getElementById(divID).style.color = "blue";
 						$
 								.get(
@@ -704,11 +768,15 @@ function scan_btn8(buttonID,showDataDivID)
 										function(responseText) {
 											$(divID).text(responseText);
 											if ('unsuccessful...! try again' == responseText) {
+												 $(b_id).prop('disabled',false);
+
 												$(divID).css("color", "red");
 												tryAgain();
 											} 
 											else if('Sorry You are Not Authorised for this :('==responseText)
 													{
+												 $(b_id).prop('disabled',false);
+
 												$(divID).css("color", "red");
 													}
 											
@@ -736,6 +804,8 @@ function scan_btn9(buttonID,showDataDivID)
 	  
 						$(divID).text("Place your thumb on the sensor");
 						$(divID).css("color", "blue");
+						 $(b_id).prop('disabled',true);
+
 						//document.getElementById(divID).style.color = "blue";
 						$
 								.get(
@@ -743,11 +813,15 @@ function scan_btn9(buttonID,showDataDivID)
 										function(responseText) {
 											$(divID).text(responseText);
 											if ('unsuccessful...! try again' == responseText) {
+												 $(b_id).prop('disabled',false);
+
 												$(divID).css("color", "red");
 												tryAgain();
 											} 
 											else if('Sorry You are Not Authorised for this :('==responseText)
 													{
+												 $(b_id).prop('disabled',false);
+
 												$(divID).css("color", "red");
 													}
 											
@@ -775,6 +849,8 @@ function scan_btn10(buttonID,showDataDivID)
 	  
 						$(divID).text("Place your thumb on the sensor");
 						$(divID).css("color", "blue");
+						 $(b_id).prop('disabled',true);
+
 						//document.getElementById(divID).style.color = "blue";
 						$
 								.get(
@@ -782,11 +858,15 @@ function scan_btn10(buttonID,showDataDivID)
 										function(responseText) {
 											$(divID).text(responseText);
 											if ('unsuccessful...! try again' == responseText) {
+												 $(b_id).prop('disabled',false);
+
 												$(divID).css("color", "red");
 												tryAgain();
 											} 
 											else if('Sorry You are Not Authorised for this :('==responseText)
 													{
+												 $(b_id).prop('disabled',false);
+
 												$(divID).css("color", "red");
 													}
 											
@@ -813,6 +893,8 @@ function scan_btn11(buttonID,showDataDivID)
 	  
 						$(divID).text("Place your thumb on the sensor");
 						$(divID).css("color", "blue");
+						 $(b_id).prop('disabled',true);
+
 						//document.getElementById(divID).style.color = "blue";
 						$
 								.get(
@@ -820,11 +902,15 @@ function scan_btn11(buttonID,showDataDivID)
 										function(responseText) {
 											$(divID).text(responseText);
 											if ('unsuccessful...! try again' == responseText) {
+												 $(b_id).prop('disabled',false);
+
 												$(divID).css("color", "red");
 												tryAgain();
 											} 
 											else if('Sorry You are Not Authorised for this :('==responseText)
 													{
+												 $(b_id).prop('disabled',false);
+
 												$(divID).css("color", "red");
 													}
 											
@@ -851,6 +937,8 @@ function scan_btn12(buttonID,showDataDivID)
 	  
 						$(divID).text("Place your thumb on the sensor");
 						$(divID).css("color", "blue");
+						 $(b_id).prop('disabled',true);
+
 						//document.getElementById(divID).style.color = "blue";
 						$
 								.get(
@@ -858,11 +946,15 @@ function scan_btn12(buttonID,showDataDivID)
 										function(responseText) {
 											$(divID).text(responseText);
 											if ('unsuccessful...! try again' == responseText) {
+												 $(b_id).prop('disabled',false);
+
 												$(divID).css("color", "red");
 												tryAgain();
 											} 
 											else if('Sorry You are Not Authorised for this :('==responseText)
 													{
+												 $(b_id).prop('disabled',false);
+
 												$(divID).css("color", "red");
 													}
 											
@@ -889,6 +981,8 @@ function scan_btn13(buttonID,showDataDivID)
 	  
 						$(divID).text("Place your thumb on the sensor");
 						$(divID).css("color", "blue");
+						 $(b_id).prop('disabled',true);
+
 						//document.getElementById(divID).style.color = "blue";
 						$
 								.get(
@@ -896,11 +990,15 @@ function scan_btn13(buttonID,showDataDivID)
 										function(responseText) {
 											$(divID).text(responseText);
 											if ('unsuccessful...! try again' == responseText) {
+												 $(b_id).prop('disabled',false);
+
 												$(divID).css("color", "red");
 												tryAgain();
 											} 
 											else if('Sorry You are Not Authorised for this :('==responseText)
 													{
+												 $(b_id).prop('disabled',false);
+
 												$(divID).css("color", "red");
 													}
 											
@@ -927,6 +1025,8 @@ function scan_btn14(buttonID,showDataDivID)
 	  
 						$(divID).text("Place your thumb on the sensor");
 						$(divID).css("color", "blue");
+						 $(b_id).prop('disabled',true);
+
 						//document.getElementById(divID).style.color = "blue";
 						$
 								.get(
@@ -934,11 +1034,15 @@ function scan_btn14(buttonID,showDataDivID)
 										function(responseText) {
 											$(divID).text(responseText);
 											if ('unsuccessful...! try again' == responseText) {
+												 $(b_id).prop('disabled',false);
+
 												$(divID).css("color", "red");
 												tryAgain();
 											} 
 											else if('Sorry You are Not Authorised for this :('==responseText)
 													{
+												 $(b_id).prop('disabled',false);
+
 												$(divID).css("color", "red");
 													}
 											
@@ -965,6 +1069,8 @@ function scan_btn15(buttonID,showDataDivID)
 	  
 						$(divID).text("Place your thumb on the sensor");
 						$(divID).css("color", "blue");
+						 $(b_id).prop('disabled',true);
+
 						//document.getElementById(divID).style.color = "blue";
 						$
 								.get(
@@ -972,11 +1078,15 @@ function scan_btn15(buttonID,showDataDivID)
 										function(responseText) {
 											$(divID).text(responseText);
 											if ('unsuccessful...! try again' == responseText) {
+												 $(b_id).prop('disabled',false);
+
 												$(divID).css("color", "red");
 												tryAgain();
 											} 
 											else if('Sorry You are Not Authorised for this :('==responseText)
 													{
+												 $(b_id).prop('disabled',false);
+
 												$(divID).css("color", "red");
 													}
 											
@@ -1003,6 +1113,8 @@ function scan_btn16(buttonID,showDataDivID)
 	  
 						$(divID).text("Place your thumb on the sensor");
 						$(divID).css("color", "blue");
+						 $(b_id).prop('disabled',true);
+
 						//document.getElementById(divID).style.color = "blue";
 						$
 								.get(
@@ -1010,11 +1122,15 @@ function scan_btn16(buttonID,showDataDivID)
 										function(responseText) {
 											$(divID).text(responseText);
 											if ('unsuccessful...! try again' == responseText) {
+												 $(b_id).prop('disabled',false);
+
 												$(divID).css("color", "red");
 												tryAgain();
 											} 
 											else if('Sorry You are Not Authorised for this :('==responseText)
 													{
+												 $(b_id).prop('disabled',false);
+
 												$(divID).css("color", "red");
 													}
 											
@@ -1043,17 +1159,23 @@ function scan_btn17(buttonID,showDataDivID)
 						$(divID).text("Place your thumb on the sensor");
 						$(divID).css("color", "blue");
 						//document.getElementById(divID).style.color = "blue";
+																		 $(b_id).prop('disabled',true);
+
 						$
 								.get(
 										"Scan_btn17",
 										function(responseText) {
 											$(divID).text(responseText);
 											if ('unsuccessful...! try again' == responseText) {
+												 $(b_id).prop('disabled',false);
+
 												$(divID).css("color", "red");
 												tryAgain();
 											} 
 											else if('Sorry You are Not Authorised for this :('==responseText)
 													{
+												 $(b_id).prop('disabled',false);
+
 												$(divID).css("color", "red");
 													}
 											
@@ -1885,8 +2007,8 @@ var divID;
 function photo_btn1(buttonID,showDataDivID,img)
 {
 	var queryString = '?xmlData='+'1.1';
-	var url="snapshot.jsp" + queryString;
-	newWindow=window.open(url,'jsp','name','height=800,width=800');
+	var url="snapshot.html" + queryString;
+	newWindow=window.open(url,'html','name','height=800,width=800');
 	
 	var disableDivID="#"+buttonID+"DisableDiv"+" :input";
 	divID="#"+showDataDivID;
@@ -1910,22 +2032,19 @@ var divID;
 function photo_btn2(buttonID,showDataDivID,img)
 {
 	////(buttonID+" "+showDataDivID+" "+img);
+	
+	
+	
 	var queryString = '?xmlData='+'1.2';
-	var url="snapshot.jsp" + queryString;
-	newWindow=window.open(url,'jsp','name','height=800,width=800');
+	var url="snapshot.html" + queryString;
+	newWindow=window.open(url,'html','name','height=800,width=800');
 	
 	var disableDivID="#"+buttonID+"DisableDiv"+" :input";
 	divID="#"+showDataDivID;
 	b_id="#"+buttonID;
 						$(divID).css("color", "blue");
 						//document.getElementById(divID).style.color = "blue";
-						$
-						.get(
-								"Image_btn2",
-								function(responseText) {
-									$(divID).text(responseText);
-									
-								});
+						
 						}
 </script>
 <script>
@@ -1935,8 +2054,8 @@ function photo_btn3(buttonID,showDataDivID,img)
 {
 	////(buttonID+" "+showDataDivID+" "+img);
 	var queryString = '?xmlData='+'1.3';
-	var url="snapshot.jsp" + queryString;
-	newWindow=window.open(url,'jsp','name','height=800,width=800');
+	var url="snapshot.html" + queryString;
+	newWindow=window.open(url,'html','name','height=800,width=800');
 	
 	var disableDivID="#"+buttonID+"DisableDiv"+" :input";
 	divID="#"+showDataDivID;
@@ -1945,13 +2064,8 @@ function photo_btn3(buttonID,showDataDivID,img)
 						//$(divID).text("please confirm image");
 						$(divID).css("color", "blue");
 						//document.getElementById(divID).style.color = "blue";
-						$
-						.get(
-								"Image_btn3",
-								function(responseText) {
-									$(divID).text(responseText);
-									
-								});
+						
+						
 						}
 </script>
 <script>
@@ -1961,8 +2075,8 @@ function photo_btn4(buttonID,showDataDivID,img)
 {
 	////(buttonID+" "+showDataDivID+" "+img);
 	var queryString = '?xmlData='+'2.1';
-	var url="snapshot.jsp" + queryString;
-	newWindow=window.open(url,'jsp','name','height=800,width=800');
+	var url="snapshot.html" + queryString;
+	newWindow=window.open(url,'html','name','height=800,width=800');
 	
 	var disableDivID="#"+buttonID+"DisableDiv"+" :input";
 	divID="#"+showDataDivID;
@@ -1971,13 +2085,7 @@ function photo_btn4(buttonID,showDataDivID,img)
 						//$(divID).text("please confirm image");
 						$(divID).css("color", "blue");
 						//document.getElementById(divID).style.color = "blue";
-						$
-						.get(
-								"Image_btn4",
-								function(responseText) {
-									$(divID).text(responseText);
-									
-								});
+						
 						}
 </script>
 <script>
@@ -1988,8 +2096,8 @@ function photo_btn5(buttonID,showDataDivID,img)
 	////(buttonID+" "+showDataDivID+" "+img);
 	
 	var queryString = '?xmlData='+'2.2';
-	var url="snapshot.jsp" + queryString;
-	newWindow=window.open(url,'jsp','name','height=800,width=800');
+	var url="snapshot.html" + queryString;
+	newWindow=window.open(url,'html','name','height=800,width=800');
 	
 	var disableDivID="#"+buttonID+"DisableDiv"+" :input";
 	divID="#"+showDataDivID;
@@ -1998,13 +2106,7 @@ function photo_btn5(buttonID,showDataDivID,img)
 						//$(divID).text("please confirm image");
 						$(divID).css("color", "blue");
 						//document.getElementById(divID).style.color = "blue";
-						$
-						.get(
-								"Image_btn5",
-								function(responseText) {
-									$(divID).text(responseText);
-									
-								});
+						
 						}
 </script>
 <script>
@@ -2014,8 +2116,8 @@ function photo_btn6(buttonID,showDataDivID,img)
 {
 	////(buttonID+" "+showDataDivID+" "+img);
 	var queryString = '?xmlData='+'2.3';
-	var url="snapshot.jsp" + queryString;
-	newWindow=window.open(url,'jsp','name','height=800,width=800');
+	var url="snapshot.html" + queryString;
+	newWindow=window.open(url,'html','name','height=800,width=800');
 	
 	var disableDivID="#"+buttonID+"DisableDiv"+" :input";
 	divID="#"+showDataDivID;
@@ -2024,13 +2126,7 @@ function photo_btn6(buttonID,showDataDivID,img)
 						//$(divID).text("please confirm image");
 						$(divID).css("color", "blue");
 						//document.getElementById(divID).style.color = "blue";
-						$
-						.get(
-								"Image_btn6",
-								function(responseText) {
-									$(divID).text(responseText);
-									
-								});
+					
 						}
 </script>
 <script>
@@ -2040,8 +2136,8 @@ function photo_btn7(buttonID,showDataDivID,img)
 {
 	////(buttonID+" "+showDataDivID+" "+img);
 	var queryString = '?xmlData='+'3.1';
-	var url="snapshot.jsp" + queryString;
-	newWindow=window.open(url,'jsp','name','height=800,width=800');
+	var url="snapshot.html" + queryString;
+	newWindow=window.open(url,'html','name','height=800,width=800');
 	
 	var disableDivID="#"+buttonID+"DisableDiv"+" :input";
 	divID="#"+showDataDivID;
@@ -2050,13 +2146,7 @@ function photo_btn7(buttonID,showDataDivID,img)
 						//$(divID).text("please confirm image");
 						$(divID).css("color", "blue");
 						//document.getElementById(divID).style.color = "blue";
-						$
-						.get(
-								"Image_btn7",
-								function(responseText) {
-									$(divID).text(responseText);
-									
-								});
+						
 						}
 </script>
 <script>
@@ -2064,6 +2154,9 @@ var b_id;
 var divID;
 function photo_btn8(buttonID,showDataDivID,img)
 {
+	var queryString = '?xmlData='+'3.2';
+	var url="snapshot.html" + queryString;
+	newWindow=window.open(url,'html','name','height=800,width=800');
 	//(buttonID+" "+showDataDivID+" "+img);
 	var disableDivID="#"+buttonID+"DisableDiv"+" :input";
 	divID="#"+showDataDivID;
@@ -2072,13 +2165,7 @@ function photo_btn8(buttonID,showDataDivID,img)
 						//$(divID).text("please confirm image");
 						$(divID).css("color", "blue");
 						//document.getElementById(divID).style.color = "blue";
-						$
-						.get(
-								"Image_btn8",
-								function(responseText) {
-									$(divID).text(responseText);
-									
-								});
+						
 						}
 </script>
 <script>
@@ -2086,6 +2173,11 @@ var b_id;
 var divID;
 function photo_btn9(buttonID,showDataDivID,img)
 {
+	
+	
+	var queryString = '?xmlData='+'4.1';
+	var url="snapshot.html" + queryString;
+	newWindow=window.open(url,'html','name','height=800,width=800');
 	////(buttonID+" "+showDataDivID+" "+img);
 	var disableDivID="#"+buttonID+"DisableDiv"+" :input";
 	divID="#"+showDataDivID;
@@ -2108,6 +2200,9 @@ var b_id;
 var divID;
 function photo_btn10(buttonID,showDataDivID,img)
 {
+	var queryString = '?xmlData='+'4.2';
+	var url="snapshot.html" + queryString;
+	newWindow=window.open(url,'html','name','height=800,width=800');
 	////(buttonID+" "+showDataDivID+" "+img);
 	var disableDivID="#"+buttonID+"DisableDiv"+" :input";
 	divID="#"+showDataDivID;
@@ -2116,13 +2211,7 @@ function photo_btn10(buttonID,showDataDivID,img)
 						$(divID).text("please confirm image");
 						$(divID).css("color", "blue");
 						//document.getElementById(divID).style.color = "blue";
-						$
-						.get(
-								"Image_btn10",
-								function(responseText) {
-									$(divID).text(responseText);
-									
-								});
+						
 						}
 </script>
 <script>
@@ -2130,6 +2219,9 @@ var b_id;
 var divID;
 function photo_btn31(buttonID,showDataDivID,img)
 {
+	var queryString = '?xmlData='+'5.1';
+	var url="snapshot.html" + queryString;
+	newWindow=window.open(url,'html','name','height=800,width=800');
 	////(buttonID+" "+showDataDivID+" "+img);
 	var disableDivID="#"+buttonID+"DisableDiv"+" :input";
 	divID="#"+showDataDivID;
@@ -2138,13 +2230,7 @@ function photo_btn31(buttonID,showDataDivID,img)
 						//$(divID).text("please confirm image");
 						$(divID).css("color", "blue");
 						//document.getElementById(divID).style.color = "blue";
-						$
-						.get(
-								"Image_btn31",
-								function(responseText) {
-									$(divID).text(responseText);
-									
-								});
+						
 						}
 </script>
 <script>
@@ -2153,6 +2239,10 @@ var divID;
 function photo_btn32(buttonID,showDataDivID,img)
 {
 	////(buttonID+" "+showDataDivID+" "+img);
+	
+	var queryString = '?xmlData='+'5.2';
+	var url="snapshot.html" + queryString;
+	newWindow=window.open(url,'html','name','height=800,width=800');
 	var disableDivID="#"+buttonID+"DisableDiv"+" :input";
 	divID="#"+showDataDivID;
 	b_id="#"+buttonID;
@@ -2185,7 +2275,7 @@ function photo_btn32(buttonID,showDataDivID,img)
 }
 
 body {
-		overflow: hidden;
+	overflow: none;
 	background-color: red;
 }
 
@@ -2232,15 +2322,6 @@ textarea {
 	margin: 4px 2px;
 	cursor: pointer;
 }
-
-#checkButton{
-	display: inline-block;
-	margin: 4px 10px;
-	height: 56px;
-	padding-left: 0px;
-	box-shadow: 3px solid red;
-}
-
 
 .scanButton :hover {
 	background-color: red; /* Green */
@@ -2502,7 +2583,7 @@ function pictureSaved() {
 							</div>
 						</div>
 						<div class="col-sm-6">
-							<div class="col-sm-4" >
+							<div class="col-sm-4">
 
 								<button type="button" id="photoButton1" class="iconButton"
 									onclick=photo_btn1("photoButton1","pic1_Loc","image1");
@@ -2512,14 +2593,14 @@ function pictureSaved() {
 								</button>
 
 							</div>
-							<div class="col-sm-4"  id="done">
+							<div class="col-sm-4">
 								<button type="button" id="commentButton1" class="iconButton"
 									onclick=addComment("commentButton1");>
 									<img src="images/commenticon.png"
 										style="height: 50px; width: 50px" />
 								</button>
 							</div>
-							<div class="col-sm-4" id="scanbtndiv">
+							<div class="col-sm-4">
 								<button type="button" id="scanData1" class="iconButton"
 									onclick=scan_btn1("scanData1","hide1");>
 									<img src="images/scanicon.png" id="scanImage" />
@@ -2558,7 +2639,7 @@ function pictureSaved() {
 							</div>
 						</div>
 						<div class="col-sm-6">
-							<div class="col-sm-4" >
+							<div class="col-sm-4">
 
 								<button type="button" id="photoButton2" class="iconButton"
 									onclick=photo_btn2("photoButton2","pic2_Loc","image2");>
@@ -2566,7 +2647,7 @@ function pictureSaved() {
 								</button>
 
 							</div>
-							<div class="col-sm-4" id="done2">
+							<div class="col-sm-4">
 								<button type="button" id="commentButton2" class="iconButton"
 									onclick=addComment("commentButton2");>
 									<img src="images/commenticon.png" id="scanImage" />
@@ -2574,7 +2655,7 @@ function pictureSaved() {
 
 
 							</div>
-							<div class="col-sm-4" id="scanbtndiv2">
+							<div class="col-sm-4">
 								<button type="button" id="scanData2" class="iconButton"
 									onclick=scan_btn2("scanData2","hide2");>
 									<img src="images/scanicon.png" id="scanImage" />
@@ -2606,7 +2687,7 @@ function pictureSaved() {
 							</div>
 						</div>
 						<div class="col-sm-12">
-							<div class="col-sm-6" id="normalFont">TIME</div>
+							<div class="col-sm-6" name="sec1_time" id="normalFont">TIME</div>
 							<div class="col-sm-6">
 								<div class='input-group date' id='timepicker1'
 									style="margin-top: 5px;">
@@ -2670,14 +2751,14 @@ function pictureSaved() {
 											style="height: 50px; width: 50px" />
 									</button>
 								</div>
-								<div class="col-sm-4" id="done3" >
+								<div class="col-sm-4">
 
 									<button type="button" id="commentButton3" class="iconButton"
 										onclick=addComment("commentButton3");>
 										<img src="images/commenticon.png" id="scanImage" />
 									</button>
 								</div>
-								<div class="col-sm-4" id="scanbtndiv3">
+								<div class="col-sm-4">
 
 									<!-- 		<div id="scanDataDiv3"
 									onmouseover="scanButton3HoverTestingMethod()"
@@ -2742,14 +2823,14 @@ function pictureSaved() {
 								</button>
 
 							</div>
-							<div class="col-sm-4" id="done4">
-								<button type="button" id="commentButton4" class="iconButton"
+							<div class="col-sm-4">
+								<button type="button" id="commentButton3" class="iconButton"
 									onclick=addComment("commentButton4");>
 									<img src="images/commenticon.png"
 										style="height: 50px; width: 50px" />
 								</button>
 							</div>
-							<div class="col-sm-4" id="scanbtndiv4">
+							<div class="col-sm-4">
 								<button type="button" id="scanData4" class="iconButton"
 									onclick=scan_btn4("scanData4","hide4");>
 									<img src="images/scanicon.png" id="scanImage" />
@@ -3187,8 +3268,8 @@ function pictureSaved() {
 
 							</div>
 							<div class="col-sm-4">
-								<button type="button" id="commentButton12" class="iconButton"
-								onclick=addComment("commentButton12");>
+								<button type="button" id="commentButton12" onclick=addComment(
+									"commentButton12");  class="iconButton">
 									<img src="images/commenticon.png" id="scanImage" />
 								</button>
 							</div>
@@ -3240,8 +3321,8 @@ function pictureSaved() {
 
 							</div>
 							<div class="col-sm-4">
-									<button type="button" id="commentButton13" class="iconButton"
-								onclick=addComment("commentButton13");>
+								<button type="button" id="commentButton13" class="iconButton"
+									onclick=addComment( "commentButton13"); class="iconButton">
 									<img src="images/commenticon.png" id="scanImage" />
 								</button>
 							</div>
@@ -3452,28 +3533,19 @@ function pictureSaved() {
 			</center>
 		</div>
 	</div>
-	
-
 	<script>
-	
 var modal = document.getElementById('myModal');
 var btn = document.getElementById("myBtn");
 var span = document.getElementsByClassName("close")[0];
-var btnid;
-
 function addComment(buttonID) {
-	btnid=(buttonID);
   modal.style.display = "block";
 }
-
-function closePopup(){
-	var d='<img src="images/check.svg" title="Already Done" style="height: 50px; width: 50px" />';
-	 document.getElementById(btnid).innerHTML =d;
-	 document.getElementById(btnid).disabled = true;
-	 document.getElementById("popupText").value = "";
-	 modal.style.display = "none";
+function closePopup()
+{
+popupText
+document.getElementById("popupText").value = "";
+  modal.style.display = "none";
 }
-
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
   modal.style.display = "none";
