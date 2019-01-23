@@ -423,7 +423,7 @@ function scan_btn1(buttonID,showDataDivID)
 											
 											else {
 												var d='<img src="images/check.svg" id="checkButton" title="Already Done">';
-												  document.getElementById("firstscan").innerHTML =d;
+												  document.getElementById("scanbtndiv").innerHTML =d;
 												  document.getElementById("yesnona").style.cursor = "none";
 												$(disableDivID).attr('readonly', true);
 												detailsRegistered();
@@ -465,13 +465,11 @@ function scan_btn2(buttonID,showDataDivID)
 													}
 											
 											else {
-												$(divID).css("color", "blue");
-												var x = document.getElementById(b_id);
-												$(b_id).text("Done");
-												$(b_id).css("background-color", "#5398CD");
-												 $(b_id).prop('disabled',true);
+												var d='<img src="images/check.svg" id="checkButton" title="Already Done">';
+												  document.getElementById("scanbtndiv2").innerHTML =d;
 													$(disableDivID).attr('readonly', true);
 													detailsRegistered();
+													getLocation(showDataDivID);
 											}
 										});
 						}
@@ -507,15 +505,15 @@ function scan_btn3(buttonID,showDataDivID)
 													}
 											
 											else {
-												$(divID).css("color", "blue");
-												var x = document.getElementById(b_id);
-												$(b_id).text("Done");
-												$(b_id).css("background-color", "#5398CD");
+												var d='<img src="images/check.svg" id="checkButton" title="Already Done">';
+												  document.getElementById("scanbtndiv3").innerHTML =d;
+												  getLocation(showDataDivID);
 												 $(b_id).prop('disabled',true);
 												 
 													$(disableDivID).attr('readonly', true);
 												
 													detailsRegistered();
+													getLocation(showDataDivID);
 											}
 										});						}
 </script>
@@ -550,10 +548,9 @@ function scan_btn4(buttonID,showDataDivID)
 													}
 											
 											else {
-												$(divID).css("color", "blue");
-												var x = document.getElementById(b_id);
-												$(b_id).text("Done");
-												$(b_id).css("background-color", "#5398CD");
+												var d='<img src="images/check.svg" id="checkButton" title="Already Done">';
+												  document.getElementById("scanbtndiv4").innerHTML =d;
+												  getLocation(showDataDivID);
 												$(disableDivID).attr('readonly', true);
 											}
 										});
@@ -2507,7 +2504,7 @@ function pictureSaved() {
 										style="height: 50px; width: 50px" />
 								</button>
 							</div>
-							<div class="col-sm-4" id="firstscan">
+							<div class="col-sm-4" id="scanbtndiv">
 								<button type="button" id="scanData1" class="iconButton"
 									onclick=scan_btn1("scanData1","hide1");>
 									<img src="images/scanicon.png" id="scanImage" />
@@ -2546,7 +2543,7 @@ function pictureSaved() {
 							</div>
 						</div>
 						<div class="col-sm-6">
-							<div class="col-sm-4">
+							<div class="col-sm-4" >
 
 								<button type="button" id="photoButton2" class="iconButton"
 									onclick=photo_btn2("photoButton2","pic2_Loc","image2");>
@@ -2554,7 +2551,7 @@ function pictureSaved() {
 								</button>
 
 							</div>
-							<div class="col-sm-4">
+							<div class="col-sm-4" id="done2">
 								<button type="button" id="commentButton2" class="iconButton"
 									onclick=addComment("commentButton2");>
 									<img src="images/commenticon.png" id="scanImage" />
@@ -2562,7 +2559,7 @@ function pictureSaved() {
 
 
 							</div>
-							<div class="col-sm-4">
+							<div class="col-sm-4" id="scanbtndiv2">
 								<button type="button" id="scanData2" class="iconButton"
 									onclick=scan_btn2("scanData2","hide2");>
 									<img src="images/scanicon.png" id="scanImage" />
@@ -2658,14 +2655,14 @@ function pictureSaved() {
 											style="height: 50px; width: 50px" />
 									</button>
 								</div>
-								<div class="col-sm-4">
+								<div class="col-sm-4" id="done3" >
 
 									<button type="button" id="commentButton3" class="iconButton"
 										onclick=addComment("commentButton3");>
 										<img src="images/commenticon.png" id="scanImage" />
 									</button>
 								</div>
-								<div class="col-sm-4">
+								<div class="col-sm-4" id="scanbtndiv3">
 
 									<!-- 		<div id="scanDataDiv3"
 									onmouseover="scanButton3HoverTestingMethod()"
@@ -2730,14 +2727,14 @@ function pictureSaved() {
 								</button>
 
 							</div>
-							<div class="col-sm-4">
-								<button type="button" id="commentButton3" class="iconButton"
+							<div class="col-sm-4" id="done4">
+								<button type="button" id="commentButton4" class="iconButton"
 									onclick=addComment("commentButton4");>
 									<img src="images/commenticon.png"
 										style="height: 50px; width: 50px" />
 								</button>
 							</div>
-							<div class="col-sm-4">
+							<div class="col-sm-4" id="scanbtndiv4">
 								<button type="button" id="scanData4" class="iconButton"
 									onclick=scan_btn4("scanData4","hide4");>
 									<img src="images/scanicon.png" id="scanImage" />
@@ -3175,8 +3172,8 @@ function pictureSaved() {
 
 							</div>
 							<div class="col-sm-4">
-								<button type="button" id="commentButton12" onclick=addComment(
-									"commentButton12");  class="iconButton">
+								<button type="button" id="commentButton12" class="iconButton"
+								onclick=addComment("commentButton12");>
 									<img src="images/commenticon.png" id="scanImage" />
 								</button>
 							</div>
@@ -3228,8 +3225,8 @@ function pictureSaved() {
 
 							</div>
 							<div class="col-sm-4">
-								<button type="button" id="commentButton13" class="iconButton"
-									onclick=addComment( "commentButton13"); class="iconButton">
+									<button type="button" id="commentButton13" class="iconButton"
+								onclick=addComment("commentButton13");>
 									<img src="images/commenticon.png" id="scanImage" />
 								</button>
 							</div>
@@ -3441,27 +3438,28 @@ function pictureSaved() {
 		</div>
 	</div>
 	
-	<script>
-var d='<img src="images/check.svg" id="checkButton" title="Already Done">';
-
-function cmntbnt(){
-	  document.getElementById("done").innerHTML =d;	  
-}
-</script>
+	
 
 	<script>
+	
 var modal = document.getElementById('myModal');
 var btn = document.getElementById("myBtn");
 var span = document.getElementsByClassName("close")[0];
+var btnid;
+
 function addComment(buttonID) {
+	btnid=(buttonID);
   modal.style.display = "block";
 }
-function closePopup()
-{
-	cmntbnt();
+function closePopup(){
+	var d='<img src="images/check.svg" title="Already Done" style="height: 50px; width: 50px" />';
+	 document.getElementById(btnid).innerHTML =d;
+	 document.getElementById(btnid).disabled = true;
 document.getElementById("popupText").value = "";
   modal.style.display = "none";
+ 
 }
+
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
   modal.style.display = "none";
