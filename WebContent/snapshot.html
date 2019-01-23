@@ -1,0 +1,160 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<script src="canvas2image.js"></script>
+	<style type="text/css">
+		body { font-family: Helvetica, sans-serif; 
+		background-color:#eff4f2;}
+		h1, h2, h3 { margin-top:0; margin-bottom:0; }
+		form { margin-top: 15px; }
+		form input { margin-right: 15px; }
+		#confirmCam{
+		height:500px;
+		font-size:40px;
+		font-weight:bold;
+		font-family:poor richard;
+		padding-top:200px;
+		display:none;}
+	</style>
+</head>
+<body>
+		<center><div id="my_camera" style="border:1px solid black;"></div></center>
+		
+		<!-- First, include the Webcam.js JavaScript Library -->
+		<script type="text/javascript" src="webcam.min.js"></script>
+		
+		<!-- Configure a few settings and attach camera -->
+		<script language="JavaScript">
+			Webcam.set({
+				// live preview size
+				width: 500,
+				height: 400,
+				
+				// device capture size
+				dest_width: 500,
+				dest_height: 400,
+				
+				// final cropped size
+				crop_width: 500,
+				crop_height: 400,
+				
+				// format and quality
+				image_format: 'jpeg',
+				jpeg_quality: 90,
+				
+				// flip horizontal (mirror mode)
+				flip_horiz: true
+			});
+			Webcam.attach( '#my_camera' );
+		</script>
+		
+		<!-- A button for taking snaps -->
+		<form>
+			<div id="pre_take_buttons">
+				<!-- This button is shown before the user takes a snapshot -->
+				<center>
+				<button type="button" class="btn btn-info" onClick="preview_snapshot()" >Take Snapshot</button></center>
+			</div>
+			<div id="post_take_buttons" style="display:none">
+				<center>
+				<button type="button" class="btn btn-info" onClick="cancel_preview()">Take Another</button>
+				<button type="button" class="btn btn-info" onClick="save_photo()">Save Photo</button>
+				</center>
+			</div>
+		</form>
+	</div>
+	 <center> <canvas  id="mycanvas" height="500" width="500" ></canvas>  </center>
+	 <center>
+	
+		<!-- Your captured image will appear here... -->	
+	<!-- Code to handle taking the snapshot and displaying it locally -->
+	<script language="JavaScript">
+		// preload shutter audio clip
+		var shutter = new Audio();
+		shutter.autoplay = false;
+		shutter.src = navigator.userAgent.match(/Firefox/) ? 'shutter.ogg' : 'shutter.mp3';
+		
+		function preview_snapshot() {
+			// play sound effect
+			try { shutter.currentTime = 0; } catch(e) {;} // fails in IE
+			shutter.play();
+			
+			// freeze camera so user can preview current frame
+			Webcam.freeze();
+			
+			// swap button sets
+			document.getElementById('pre_take_buttons').style.display = 'none';
+			document.getElementById('post_take_buttons').style.display = '';
+		}
+		
+		function cancel_preview() {
+			// cancel preview freeze and return to live camera view
+			Webcam.unfreeze();
+			document.getElementById('my_camera').style.display = 'block';
+			document.getElementById('mycanvas').style.display = 'none';
+			// swap buttons back to first set
+			document.getElementById('pre_take_buttons').style.display = '';
+			document.getElementById('post_take_buttons').style.display = 'none';
+			
+		}
+		
+		function save_photo() {
+			Webcam.snap( function(data_uri) {
+				loadCanvas(data_uri);				
+				Webcam.reset();
+				document.getElementById('my_camera').style.display = 'none';
+			} );
+		}
+		 function loadCanvas(dataURL) {
+        var canvas = document.getElementById('mycanvas');
+        var context = canvas.getContext('2d');
+
+        // load image from data url
+        var imageObj = new Image();
+        imageObj.onload = function() {
+		  context.drawImage(this,0,0);
+        };
+        imageObj.src = dataURL;
+		to_image();
+		document.getElementById('post_take_buttons').style.display = 'none';
+		document.getElementById('mycanvas').style.display = 'none';
+		document.getElementById('confirmCam').style.display = 'block';
+      }
+	  function to_image(){
+				//closeWindow();	
+				//var wshShell = new ActiveXObject("WScript.Shell");
+				//wshShell.Run("a.bat");
+                var canvas = document.getElementById("mycanvas");
+               //document.getElementById("theimage").src = canvas.toDataURL();
+                Canvas2Image.saveAsJPEG(canvas);
+                
+                $.get("#", function(responseText) {
+        			var urlParams = new URLSearchParams(location.search);
+        			var xmlData=urlParams.get('xmlData');
+        			
+        			window.location.replace("Confirm_Image?name="+xmlData);	
+        		});
+					
+}
+function closeWindow()
+{
+window.close();
+}
+	</script>
+	<div class="col-sm-12" id="confirmCam">
+	<center >Photo Successfully Saved.<br>
+							Please click "Okay" button to close window</center>
+							<center><button type="button" class="btn btn-warning" style="font-size:30px;" onclick="closeWindow()">Okay</button>
+</center>
+	</div>
+</body>
+</html>
