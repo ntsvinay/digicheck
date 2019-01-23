@@ -440,7 +440,6 @@ function scan_btn1(buttonID,showDataDivID)
 												detailsRegistered();
 												
 												 var myRadios = $('radiofirst'); myRadios.not(':checked').prop('disabled',true);
-												alert("aa");
 												getLocation(showDataDivID);
 												
 											}
@@ -1950,10 +1949,12 @@ function photo_btn3(buttonID,showDataDivID,img)
 <script>
 var b_id;
 var divID;
+var camerabuttonId
 function photo_btn4(buttonID,showDataDivID,img)
 {
 	////(buttonID+" "+showDataDivID+" "+img);
 	var queryString = '?xmlData='+'2.1';
+	camerabuttonId =(buttonID);
 	var url="snapshot.html" + queryString;
 	newWindow=window.open(url,'html','name','height=800,width=800');
 	
@@ -1964,6 +1965,7 @@ function photo_btn4(buttonID,showDataDivID,img)
 						//$(divID).text("please confirm image");
 						$(divID).css("color", "blue");
 						//document.getElementById(divID).style.color = "blue";
+						
 						
 						}
 </script>
@@ -3834,4 +3836,6 @@ function completedMouseLeave()
 document.getElementById("checkListCompleteButton").disabled = false;
 }
 </script>
+
+
 </html>
