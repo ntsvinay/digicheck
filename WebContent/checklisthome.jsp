@@ -10,7 +10,7 @@
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <style>
-img {
+#homeImage {
 	opacity: 0.5;
 	filter: alpha(opacity = 50); /* For IE8 and earlier */
 	width: 68%
@@ -21,7 +21,7 @@ img {
 	<div class="col-sm-12">
 		<div class="col-sm-12" id="homecontent">
 			<center>
-				<img src="images/welcomeImg.jpg" />
+				<img id="homeImage" src="images/welcomeImg.jpg" />
 			</center>
 		</div>
 
