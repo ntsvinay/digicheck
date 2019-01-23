@@ -87,7 +87,7 @@ margin-top: 25px;
 	<div id="header" style="margin-left:0px; margin-right:0px;">
 	<div class="col-sm-12 row">
 	<div class="col-sm-2">
-	<a href="#default" class="logo"><img src="images/logo.png" width="120"
+	<a href="index.jsp" class="logo"><img src="images/logo.png" width="120"
 		height="70" style="margin-top: 12px;"></a>
 		</div>
 		<div class="col-sm-8">

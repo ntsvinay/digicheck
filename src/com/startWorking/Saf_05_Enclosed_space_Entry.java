@@ -160,34 +160,34 @@ public class Saf_05_Enclosed_space_Entry extends HttpServlet {
 		cal.store(file_name_for_pic, user_photo11);
 		cal.store(file_name_for_pic, user_photo12);
 
-		/*
-		 * for(int i=0;i<=11;i++) { cal.store(file_name_for_pic,""); }
-		 */
-		/*
-		 * String sql1 = "INSERT ALL   INTO USER_PHOTO_DIGI_" + checklist_name + "_" +
-		 * checklist_number + " (ID) VALUES (" + user_photo1 +
-		 * ")  INTO USER_PHOTO_DIGI_" + checklist_name + "_" + checklist_number +
-		 * " (ID) VALUES (" + user_photo2 + ") INTO USER_PHOTO_DIGI_" + checklist_name +
-		 * "_" + checklist_number + " (ID) VALUES (" + user_photo3 +
-		 * ")  INTO USER_PHOTO_DIGI_" + checklist_name + "_" + checklist_number +
-		 * " (ID) VALUES (" + user_photo4 + ")  INTO USER_PHOTO_DIGI_" + checklist_name
-		 * + "_" + checklist_number + " (ID) VALUES (" + user_photo5 +
-		 * ")  INTO USER_PHOTO_DIGI_" + checklist_name + "_" + checklist_number +
-		 * " (ID) VALUES (" + user_photo6 + ") INTO USER_PHOTO_DIGI_" + checklist_name +
-		 * "_" + checklist_number + " (ID) VALUES (" + user_photo7 +
-		 * ")   INTO USER_PHOTO_DIGI_" + checklist_name + "_" + checklist_number +
-		 * " (ID) VALUES (" + user_photo8 + ") INTO USER_PHOTO_DIGI_" + checklist_name +
-		 * "_" + checklist_number + " (ID) VALUES (" + user_photo9 +
-		 * ") INTO USER_PHOTO_DIGI_" + checklist_name + "_" + checklist_number +
-		 * " (ID) VALUES (" + user_photo10 + ")INTO USER_PHOTO_DIGI_" + checklist_name +
-		 * "_" + checklist_number + " (ID) VALUES (" + user_photo11 +
-		 * ") INTO USER_PHOTO_DIGI_" + checklist_name + "_" + checklist_number +
-		 * " (ID) VALUES (" + user_photo12 + ") SELECT * FROM dual";
-		 * System.out.println(sql1);
-		 * 
-		 * ps = con.prepareStatement(sql1); rs = ps.executeQuery();
-		 * System.out.println(" inserted table");
-		 */
+	
+		  for(int i=0;i<=11;i++) { cal.store(file_name_for_pic,""); }
+		 
+		
+		  String sql1 = "INSERT ALL   INTO USER_PHOTO_DIGI_" + checklist_name + "_" +
+		  checklist_number + " (ID) VALUES (" + user_photo1 +
+		  ")  INTO USER_PHOTO_DIGI_" + checklist_name + "_" + checklist_number +
+		  " (ID) VALUES (" + user_photo2 + ") INTO USER_PHOTO_DIGI_" + checklist_name +
+		  "_" + checklist_number + " (ID) VALUES (" + user_photo3 +
+		  ")  INTO USER_PHOTO_DIGI_" + checklist_name + "_" + checklist_number +
+		  " (ID) VALUES (" + user_photo4 + ")  INTO USER_PHOTO_DIGI_" + checklist_name
+		  + "_" + checklist_number + " (ID) VALUES (" + user_photo5 +
+		  ")  INTO USER_PHOTO_DIGI_" + checklist_name + "_" + checklist_number +
+		  " (ID) VALUES (" + user_photo6 + ") INTO USER_PHOTO_DIGI_" + checklist_name +
+		  "_" + checklist_number + " (ID) VALUES (" + user_photo7 +
+		  ")   INTO USER_PHOTO_DIGI_" + checklist_name + "_" + checklist_number +
+		  " (ID) VALUES (" + user_photo8 + ") INTO USER_PHOTO_DIGI_" + checklist_name +
+		  "_" + checklist_number + " (ID) VALUES (" + user_photo9 +
+		  ") INTO USER_PHOTO_DIGI_" + checklist_name + "_" + checklist_number +
+		  " (ID) VALUES (" + user_photo10 + ")INTO USER_PHOTO_DIGI_" + checklist_name +
+		  "_" + checklist_number + " (ID) VALUES (" + user_photo11 +
+		  ") INTO USER_PHOTO_DIGI_" + checklist_name + "_" + checklist_number +
+		  " (ID) VALUES (" + user_photo12 + ") SELECT * FROM dual";
+		  System.out.println(sql1);
+		  
+		  ps = con.prepareStatement(sql1); rs = ps.executeQuery();
+		  System.out.println(" inserted table");
+		 
 		/*
 		 * String sql1 = "INSERT ALL   INTO USER_PHOTO_DIGI_" + checklist_name + "_" +
 		 * checklist_number + " (ID,USER_DETAILS) VALUES (" + user_photo1 +
