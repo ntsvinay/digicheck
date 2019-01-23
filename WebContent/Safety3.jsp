@@ -3438,7 +3438,6 @@ function pictureSaved() {
 		</div>
 	</div>
 	
-	
 
 	<script>
 	
@@ -3451,20 +3450,11 @@ function addComment(buttonID) {
 	btnid=(buttonID);
   modal.style.display = "block";
 }
-<<<<<<< HEAD
+
 function closePopup(){
 	var d='<img src="images/check.svg" title="Already Done" style="height: 50px; width: 50px" />';
 	 document.getElementById(btnid).innerHTML =d;
 	 document.getElementById(btnid).disabled = true;
-=======
-function closePopup()
-{
-	
-	cmntbnt();
->>>>>>> d06dd44b4f53384ee8bc4f4ec747cad0009e9eb2
-document.getElementById("popupText").value = "";
-  modal.style.display = "none";
- 
 }
 
 // When the user clicks on <span> (x), close the modal
