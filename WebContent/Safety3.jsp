@@ -27,6 +27,12 @@
 
 <link rel="stylesheet" href="time.css">
 <script>
+window.onbeforeunload=function(){
+	  var msg="Are You Sure";
+	  return msg;
+	  }
+</script>
+<script>
 
 	$(document).ready(
 			function() {
@@ -120,11 +126,16 @@ function getLocation(divID) {
     //You have your locaton here
       console.log("Latitude: " + pos.coords.latitude +
         "Longitude: " + pos.coords.longitude);
-		document.getElementById(divID).innerHTML += '<p style="color:green">'+deg_to_dmslatitude(pos.coords.latitude)+" , "+deg_to_dmslongitude(pos.coords.longitude)+'</p>';
+		document.getElementById(divID).innerHTML += '<p style="color:green; cursor:pointer;" onclick=passNameDescription("'+pos.coords.latitude+'","'+pos.coords.longitude+'",)>'+deg_to_dmslatitude(pos.coords.latitude)+" , "+deg_to_dmslongitude(pos.coords.longitude)+'</p>';
     });
   } else {
     console.log("Geolocation is not supported by this browser.");
   }
+}
+function passNameDescription(a,b)
+{
+	var queryString = '?lat='+a+'&lang='+b;
+	window.location.href = "showOnMap.html" + queryString;
 }
 </script>
 <script>
@@ -424,14 +435,16 @@ function scan_btn1(buttonID,showDataDivID)
 											else {
 												var d='<img src="images/check.svg" id="checkButton" title="Already Done">';
 												  document.getElementById("scanbtndiv").innerHTML =d;
-												  document.getElementById("yesnona").style.cursor = "none";
+												 var rdo1=document.getElementById("radiofirst");
 												$(disableDivID).attr('readonly', true);
 												detailsRegistered();
+												alert(rdo1);
+												$(':radio:not(:checked)').attr('disabled', true);
 												getLocation(showDataDivID);
 												
 											}
 										});
-						}
+}
 </script>
 <script>
 var b_id;
@@ -548,6 +561,7 @@ function scan_btn4(buttonID,showDataDivID)
 												var d='<img src="images/check.svg" id="checkButton" title="Already Done">';
 												  document.getElementById("scanbtndiv4").innerHTML =d;
 												  getLocation(showDataDivID);
+												  detailsRegistered();
 												$(disableDivID).attr('readonly', true);
 											}
 										});
@@ -583,10 +597,10 @@ function scan_btn5(buttonID,showDataDivID)
 													}
 											
 											else {
-												$(divID).css("color", "blue");
-												var x = document.getElementById(b_id);
-												$(b_id).text("Done");
-												$(b_id).css("background-color", "#5398CD");
+												var d='<img src="images/check.svg" id="checkButton" title="Already Done">';
+												  document.getElementById("scanbtndiv4").innerHTML =d;
+												  getLocation(showDataDivID);
+												  detailsRegistered();
 												$(disableDivID).attr('readonly', true);
 											}
 										});
@@ -621,9 +635,10 @@ function scan_btn6(buttonID,showDataDivID)
 													}
 											
 											else {
-												$(divID).css("color", "blue");
-												var x = document.getElementById(b_id);
-												$(b_id).text("Done");
+												var d='<img src="images/check.svg" id="checkButton" title="Already Done">';
+												  document.getElementById("scanbtndiv4").innerHTML =d;
+												  getLocation(showDataDivID);
+												  detailsRegistered();
 												$(b_id).css("background-color", "#5398CD");
 												$(disableDivID).attr('readonly', true);
 											}
@@ -659,9 +674,10 @@ function scan_btn7(buttonID,showDataDivID)
 													}
 											
 											else {
-												$(divID).css("color", "blue");
-												var x = document.getElementById(b_id);
-												$(b_id).text("Done");
+												var d='<img src="images/check.svg" id="checkButton" title="Already Done">';
+												  document.getElementById("scanbtndiv4").innerHTML =d;
+												  getLocation(showDataDivID);
+												  detailsRegistered();
 												$(b_id).css("background-color", "#5398CD");
 												$(disableDivID).attr('readonly', true);
 											}
@@ -697,9 +713,10 @@ function scan_btn8(buttonID,showDataDivID)
 													}
 											
 											else {
-												$(divID).css("color", "blue");
-												var x = document.getElementById(b_id);
-												$(b_id).text("Done");
+												var d='<img src="images/check.svg" id="checkButton" title="Already Done">';
+												  document.getElementById("scanbtndiv4").innerHTML =d;
+												  getLocation(showDataDivID);
+												  detailsRegistered();
 												$(b_id).css("background-color", "#5398CD");
 												$(disableDivID).attr('readonly', true);
 											}
@@ -735,9 +752,10 @@ function scan_btn9(buttonID,showDataDivID)
 													}
 											
 											else {
-												$(divID).css("color", "blue");
-												var x = document.getElementById(b_id);
-												$(b_id).text("Done");
+												var d='<img src="images/check.svg" id="checkButton" title="Already Done">';
+												  document.getElementById("scanbtndiv4").innerHTML =d;
+												  getLocation(showDataDivID);
+												  detailsRegistered();
 												$(b_id).css("background-color", "#5398CD");
 												$(disableDivID).attr('readonly', true);
 											}
@@ -773,10 +791,10 @@ function scan_btn10(buttonID,showDataDivID)
 													}
 											
 											else {
-												$(divID).css("color", "blue");
-												var x = document.getElementById(b_id);
-												$(b_id).text("Done");
-												$(b_id).css("background-color", "#5398CD");
+												var d='<img src="images/check.svg" id="checkButton" title="Already Done">';
+												  document.getElementById("scanbtndiv4").innerHTML =d;
+												  getLocation(showDataDivID);
+												  detailsRegistered();
 												$(disableDivID).attr('readonly', true);
 											}
 										});						}
@@ -811,10 +829,10 @@ function scan_btn11(buttonID,showDataDivID)
 													}
 											
 											else {
-												$(divID).css("color", "blue");
-												var x = document.getElementById(b_id);
-												$(b_id).text("Done");
-												$(b_id).css("background-color", "#5398CD");
+												var d='<img src="images/check.svg" id="checkButton" title="Already Done">';
+												  document.getElementById("scanbtndiv4").innerHTML =d;
+												  getLocation(showDataDivID);
+												  detailsRegistered();
 												$(disableDivID).attr('readonly', true);
 											}
 										});						}
@@ -849,10 +867,10 @@ function scan_btn12(buttonID,showDataDivID)
 													}
 											
 											else {
-												$(divID).css("color", "blue");
-												var x = document.getElementById(b_id);
-												$(b_id).text("Done");
-												$(b_id).css("background-color", "#5398CD");
+												var d='<img src="images/check.svg" id="checkButton" title="Already Done">';
+												  document.getElementById("scanbtndiv4").innerHTML =d;
+												  getLocation(showDataDivID);
+												  detailsRegistered();
 												$(disableDivID).attr('readonly', true);
 											}
 										});						}
@@ -887,10 +905,10 @@ function scan_btn13(buttonID,showDataDivID)
 													}
 											
 											else {
-												$(divID).css("color", "blue");
-												var x = document.getElementById(b_id);
-												$(b_id).text("Done");
-												$(b_id).css("background-color", "#5398CD");
+												var d='<img src="images/check.svg" id="checkButton" title="Already Done">';
+												  document.getElementById("scanbtndiv4").innerHTML =d;
+												  getLocation(showDataDivID);
+												  detailsRegistered();
 												$(disableDivID).attr('readonly', true);
 											}
 										});						}
@@ -925,10 +943,10 @@ function scan_btn14(buttonID,showDataDivID)
 													}
 											
 											else {
-												$(divID).css("color", "blue");
-												var x = document.getElementById(b_id);
-												$(b_id).text("Done");
-												$(b_id).css("background-color", "#5398CD");
+												var d='<img src="images/check.svg" id="checkButton" title="Already Done">';
+												  document.getElementById("scanbtndiv4").innerHTML =d;
+												  getLocation(showDataDivID);
+												  detailsRegistered();
 												$(disableDivID).attr('readonly', true);
 											}
 										});						}
@@ -963,10 +981,10 @@ function scan_btn15(buttonID,showDataDivID)
 													}
 											
 											else {
-												$(divID).css("color", "blue");
-												var x = document.getElementById(b_id);
-												$(b_id).text("Done");
-												$(b_id).css("background-color", "#5398CD");
+												var d='<img src="images/check.svg" id="checkButton" title="Already Done">';
+												  document.getElementById("scanbtndiv4").innerHTML =d;
+												  getLocation(showDataDivID);
+												  detailsRegistered();
 												$(disableDivID).attr('readonly', true);
 											}
 										});						}
@@ -1001,10 +1019,10 @@ function scan_btn16(buttonID,showDataDivID)
 													}
 											
 											else {
-												$(divID).css("color", "blue");
-												var x = document.getElementById(b_id);
-												$(b_id).text("Done");
-												$(b_id).css("background-color", "#5398CD");
+												var d='<img src="images/check.svg" id="checkButton" title="Already Done">';
+												  document.getElementById("scanbtndiv4").innerHTML =d;
+												  getLocation(showDataDivID);
+												  detailsRegistered();
 												$(disableDivID).attr('readonly', true);
 											}
 										});						}
@@ -1040,10 +1058,10 @@ function scan_btn17(buttonID,showDataDivID)
 													}
 											
 											else {
-												$(divID).css("color", "blue");
-												var x = document.getElementById(b_id);
-												$(b_id).text("Done");
-												$(b_id).css("background-color", "#5398CD");
+												var d='<img src="images/check.svg" id="checkButton" title="Already Done">';
+												  document.getElementById("scanbtndiv4").innerHTML =d;
+												  getLocation(showDataDivID);
+												  detailsRegistered();
 												$(disableDivID).attr('readonly', true);
 											}
 										});						}
@@ -2466,10 +2484,10 @@ function pictureSaved() {
 					<div class="col-sm-5" id="normalFont">HAS THE SPACE BEEN
 						THOROUGHLY VENTILATED BY MECHANICAL MEANS</div>
 					<div class="col-sm-7">
-						<div class="col-sm-6">
+						<div class="col-sm-6" id="radiofirst">
 							<div class="col-sm-4">
 								<label class="radio-inline"> <input type="radio"
-									name="optradio1" value="yes" checked id="yesnona">
+									name="optradio1" value="No" id="yesnona" checked>
 								</label>
 							</div>
 							<div class="col-sm-4">
