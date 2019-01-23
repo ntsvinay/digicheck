@@ -507,11 +507,8 @@ function scan_btn3(buttonID,showDataDivID)
 											else {
 												var d='<img src="images/check.svg" id="checkButton" title="Already Done">';
 												  document.getElementById("scanbtndiv3").innerHTML =d;
-												  getLocation(showDataDivID);
 												 $(b_id).prop('disabled',true);
-												 
 													$(disableDivID).attr('readonly', true);
-												
 													detailsRegistered();
 													getLocation(showDataDivID);
 											}
