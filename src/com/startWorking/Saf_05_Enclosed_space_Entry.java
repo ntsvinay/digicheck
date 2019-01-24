@@ -364,17 +364,17 @@ public class Saf_05_Enclosed_space_Entry extends HttpServlet {
 //********************************************************************************		  
 
 //**************************create table***********************************				
-				/*
-				 * sec4_gas_digi(); sec4_scan_digi(); sec4_photo_digi(); user_scan_digi();
-				 * user_scan_in_out_digi(); complete_checklist();
-				 */
+				
+				  sec4_gas_digi(); sec4_scan_digi(); sec4_photo_digi(); user_scan_digi();
+				  user_scan_in_out_digi(); complete_checklist();
+				 
 //**************************************table created************************
 
 //-------------------------------------------------------insert table-----------------------------------------------------------------			  
-				/*
-				 * insert_sec4_gas_digi(); insert_sec4_scan_digi(); insert_user_photo_digi();
-				 * insert_user_scan_digi(); insert_user_scan_in_out_digi();
-				 */
+				
+				  insert_sec4_gas_digi(); insert_sec4_scan_digi(); insert_user_photo_digi();
+				  insert_user_scan_digi(); insert_user_scan_in_out_digi();
+				 
 //----------------table inserted---------------------------------------------------------			 
 
 			} else {
