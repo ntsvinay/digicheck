@@ -1964,14 +1964,11 @@ function photo_btn4(buttonID,showDataDivID,img)
 {
 	////(buttonID+" "+showDataDivID+" "+img);
 	var queryString = '?xmlData='+'2.1';
-<<<<<<< HEAD
+
 	camerabuttonId =(buttonID);
 	var url="snapshot.html" + queryString;
 	newWindow=window.open(url,'html','name','height=800,width=800');
-=======
-	var url="snapshot.jsp" + queryString;
-	newWindow=window.open(url,'jsp','name','height=800,width=800');
->>>>>>> 453f3a0343803a21e0ca0d068deaf3ff70696bf6
+
 	
 	var disableDivID="#"+buttonID+"DisableDiv"+" :input";
 	divID="#"+showDataDivID;
@@ -1980,17 +1977,9 @@ function photo_btn4(buttonID,showDataDivID,img)
 						//$(divID).text("please confirm image");
 						$(divID).css("color", "blue");
 						//document.getElementById(divID).style.color = "blue";
-<<<<<<< HEAD
 						
 						
-=======
-						$
-						.get(
-								"Image_btn4",
-								function(responseText) {
-									$(divID).text(responseText);
-									
-								});
+						
 >>>>>>> 453f3a0343803a21e0ca0d068deaf3ff70696bf6
 						}
 </script>
@@ -3217,13 +3206,9 @@ function pictureSaved() {
 
 							</div>
 							<div class="col-sm-4">
-<<<<<<< HEAD
-								<button type="button" id="commentButton12" onclick=addComment(
-									"commentButton12","4.1");  class="iconButton">
-=======
+
 								<button type="button" id="commentButton12" class="iconButton"
-								onclick=addComment("commentButton12");>
->>>>>>> 45fcb2f98dad80bc36914087631f0ba7e3b36356
+								onclick=addComment("commentButton12");
 									<img src="images/commenticon.png" id="scanImage" />
 								</button>
 							</div>
@@ -3590,61 +3575,60 @@ window.onclick = function(event) {
 	var btn = document.getElementById("myBtn");
 	var span = document.getElementsByClassName("close")[0];
 	var x;
-	function addComment(buttonID,btnno) {
-		x=""+buttonID;
-		y=""+btnno;
-		document.getElementById("x");
-		document.getElementById("y");
-
-		
-	  modal.style.display = "block";
-	  alert(y);
-
-	  //*********************************************************
+	
 	  
-	  
-	  
-	           
 
-			   
+function addComment(buttonID,btnno) {
+	btnid=(buttonID);
+	x=""+buttonID;
+	y=""+btnno;
+	document.getElementById("x");
+	document.getElementById("y");
 
-	         $.ajax({
+	
+  modal.style.display = "block";
+  alert(y);
+
+  //*********************************************************
+  
+  
+  
+           
+
+		   
+
+         $.ajax({
+            url:'check',
+            type:'get',
+            data:{name:y},
+            success:function(data){
+               alert(data);
+               $('#').text(responseText); 
+            },
+            
+         }
+    );  
+  
+  modal.style.display = "block";
+}
+
+function closePopup(){
+	var a=document.getElementById("popupText").value;
+
+	alert(a);
+
+	  $.ajax({
+
 	            url:'check',
-	            type:'get',
-	            data:{name:y},
+	            type:'post',
+	            data:{name:a},
 	            success:function(data){
 	               alert(data);
 	               $('#').text(responseText); 
 	            },
 	            
 	         }
-	    );  
-	  
-	  
-	  
-	  //**********************************************************
-
-	  }
-	  
-	  
-function closePopup()
-{
-popupText
-document.getElementById("popupText").value = "";
-  modal.style.display = "none";
-=======
-	
-var modal = document.getElementById('myModal');
-var btn = document.getElementById("myBtn");
-var span = document.getElementsByClassName("close")[0];
-var btnid;
-
-function addComment(buttonID) {
-	btnid=(buttonID);
-  modal.style.display = "block";
-}
-
-function closePopup(){
+	    ); 
 	var d='<img src="images/check.svg" title="Already Done" style="height: 50px; width: 50px" />';
 	 document.getElementById(btnid).innerHTML =d;
 	 document.getElementById(btnid).disabled = true;
