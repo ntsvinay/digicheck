@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<link rel="stylesheet"
+  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script
+  src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script
+  src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<style type="text/css">
+	
+	.modal {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	padding-top: 100px; /* Location of the box */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0, 0, 0); /* Fallback color */
+	background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+	background-color: #fefefe;
+	margin: auto;
+	padding: 20px;
+	border: 1px solid #888;
+	width: 60%;
+}
+
+/* The Close Button */
+.close {
+	color: #aaaaaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.close:hover, .close:focus {
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+
+	body { font-family: Helvetica, sans-serif; }
+		h2, h3 { margin-top:0; }
+		form { margin-top: 15px; }
+		form > input { margin-right: 15px; }
+		#results { float:right; margin:20px; padding:20px; border:1px solid; background:#ccc; }
+
+</style>
+
+
+</head>
+<body>
+<div id="myModal" class="modal">
+		<div class="modal-content" style="background-color: #D8CCCC;">
+			
+	<div id="results">Your captured image will appear here...</div>
+	<h1>WebcamJS Test Page</h1>
+	<h3>Demonstrates simple 320x240 capture &amp; display</h3>
+	
+	<div id="my_camera"></div>
+	
+	<!-- First, include the Webcam.js JavaScript Library -->
+	<script type="text/javascript" src="webcam.min.js"></script>
+	
+	<!-- Configure a few settings and attach camera -->
+	<script language="JavaScript">
+		Webcam.set({
+			width: 320,
+			height: 240,
+			image_format: 'jpeg',
+			jpeg_quality: 90
+		});
+		Webcam.attach( '#my_camera' );
+	</script>
+	
+	<!-- A button for taking snaps -->
+	<form>
+		<input type=button value="Take Snapshot" onClick="take_snapshot()">
+	</form>
+	
+		</div>
+	</div>
+
+
+
+	<button onclick="addComment()" id="buttonID">CAMERA</button>
+	
+
+<script>
+	function camera(){
+		var btn=doucument.getElementById('btn1');
+	newWindow=window.open('snapshot.html','html','name',"menubar=1,resizable=1,width=350,height=250");
+}
+</script>
+
+
+
+<script language="JavaScript">
+
+		var dt = new Date();
+		var m =dt.getMinutes();
+		var s =dt.getSeconds();
+		alert(s);
+		function take_snapshot() {
+			// take snapshot and get image data
+			Webcam.snap( function(data_uri) {
+document.getElementById('buttonID').innerHTML = '<img src="'+data_uri+'" style="height: 50px; width: auto;"/><br>';
+    document.getElementById( "buttonID" ).setAttribute( "onClick", "javascript: Boo();" );
+
+
+				// display results in page
+				document.getElementById('results').innerHTML = 
+					'<h2>Here is your image:</h2>' + 
+					'<img src="'+data_uri+'"/><br>'+
+					'<a href="'+data_uri+'" download="IMG'+s+m+dt.getFullYear()+'" class="btn btn-info" onClick="closePopup()">Download</a>'
+					;
+			} );
+		}
+	</script>
+
+
+
+<script>
+	
+var modal = document.getElementById('myModal');
+var btn = document.getElementById("myBtn");
+var span = document.getElementsByClassName("close")[0];
+var btnid;
+
+function addComment(buttonID) {
+	btnid=(buttonID);
+  modal.style.display = "block";
+  $(btnid).prop("onclick", null).off("click");
+}
+
+function closePopup(){
+	//var d='<img src="images/check.svg" title="Already Done" style="height: 50px; width: 50px" />';
+	// document.getElementById(btnid).innerHTML ='nk';
+	// document.getElementById(btnid).disabled = true;
+//document.getElementById("popupText").value = "";
+	 modal.style.display = "none";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>

@@ -24,8 +24,10 @@
 	type="text/javascript"></script>
 <script
 	src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 
 <link rel="stylesheet" href="time.css">
+<link rel="stylesheet" href="camera.css">
 <script>
 window.onbeforeunload=function(){
 	  var msg="Are You Sure";
@@ -2528,7 +2530,7 @@ function pictureSaved() {
 							<div class="col-sm-4" >
 
 								<button type="button" id="photoButton1" class="iconButton"
-									onclick=photo_btn1("photoButton1","pic1_Loc","image1");
+									onclick=cameraOpen("photoButton1");
 									>
 									<img src="images/cameraicon.png"
 										style="height: 50px; width: 50px" />
@@ -2584,7 +2586,7 @@ function pictureSaved() {
 							<div class="col-sm-4" >
 
 								<button type="button" id="photoButton2" class="iconButton"
-									onclick=photo_btn2("photoButton2","pic2_Loc","image2");>
+									onclick=cameraOpen("photoButton2"); >
 									<img src="images/cameraicon.png" id="scanImage" />
 								</button>
 
@@ -2687,8 +2689,7 @@ function pictureSaved() {
 							<div class="col-sm-6">
 								<div class="col-sm-4">
 									<button type="button" id="photoButton3" class="iconButton"
-										onclick=photo_btn3("photoButton3","pic3_Loc","image3");
-									>
+										onclick=cameraOpen("photoButton2"); >
 										<img src="images/cameraicon.png"
 											style="height: 50px; width: 50px" />
 									</button>
@@ -3475,6 +3476,96 @@ function pictureSaved() {
 			</center>
 		</div>
 	</div>
+	
+	
+	<div id="myModalcam" class="modal">
+		<div class="modal-content" style="background-color: #D8CCCC;">
+			
+	<div id="results">Your captured image will appear here...</div>
+	<h1>WebcamJS Test Page</h1>
+	<h3>Demonstrates simple 320x240 capture &amp; display</h3>
+	
+	<div id="my_camera"></div>
+	
+	<!-- First, include the Webcam.js JavaScript Library -->
+	<script type="text/javascript" src="webcam.min.js"></script>
+	
+	<!-- Configure a few settings and attach camera -->
+	<script language="JavaScript">
+		Webcam.set({
+			width: 320,
+			height: 240,
+			image_format: 'jpeg',
+			jpeg_quality: 90
+		});
+	
+	</script>
+	
+	<!-- A button for taking snaps -->
+	<form>
+		<input type=button value="Take Snapshot" onClick="take_snapshot()">
+	</form>
+	
+		</div>
+	</div>
+	
+	
+
+
+<script language="JavaScript">
+var cbtnid;
+
+		var dt = new Date();
+		var m =dt.getMinutes();
+		var s =dt.getSeconds();
+		function take_snapshot() {
+			// take snapshot and get image data
+			Webcam.snap( function(data_uri) {
+				// display results in page
+				alert(cbtnid);
+				document.getElementById('results').innerHTML = 
+					'<h2>Here is your image:</h2>' + 
+					'<img src="'+data_uri+'"/><br>'+
+					'<a href="'+data_uri+'" download="'+cbtnid+'" class="btn btn-info" onClick="closePopup2()">Download</a>'
+					;
+			} );
+		}
+	
+var modal2 = document.getElementById('myModalcam');
+var btn = document.getElementById("myBtn");
+var span = document.getElementsByClassName("close")[0];
+
+
+function cameraOpen(buttonId) {
+	document.getElementById('results').innerHTML ="";
+	Webcam.attach( '#my_camera' );
+	cbtnid=(buttonId);
+	alert(buttonId);
+  modal2.style.display = "block";
+  $(btnid).prop("onclick", null).off("click");
+}
+
+function closePopup2(){
+	//var d='<img src="images/check.svg" title="Already Done" style="height: 50px; width: 50px" />';
+	// document.getElementById(btnid).innerHTML ='nk';
+	// document.getElementById(btnid).disabled = true;
+//document.getElementById("popupText").value = "";
+	 modal2.style.display = "none";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal2.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal2.style.display = "none";
+  }
+}
+</script>
+	
 	
 
 	<script>
