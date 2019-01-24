@@ -2565,7 +2565,7 @@ function pictureSaved() {
 							</div>
 							<div class="col-sm-4">
 								<button type="button" id="commentButton1" class="iconButton"
-									onclick=addComment("commentButton1");>
+									onclick=addComment("commentButton1","1.1");>
 									<img src="images/commenticon.png"
 										style="height: 50px; width: 50px" />
 								</button>
@@ -2619,7 +2619,7 @@ function pictureSaved() {
 							</div>
 							<div class="col-sm-4">
 								<button type="button" id="commentButton2" class="iconButton"
-									onclick=addComment("commentButton2");>
+									onclick=addComment("commentButton2","1.2");>
 									<img src="images/commenticon.png" id="scanImage" />
 								</button>
 
@@ -2724,7 +2724,7 @@ function pictureSaved() {
 								<div class="col-sm-4">
 
 									<button type="button" id="commentButton3" class="iconButton"
-										onclick=addComment("commentButton3");>
+										onclick=addComment("commentButton3","1.3");>
 										<img src="images/commenticon.png" id="scanImage" />
 									</button>
 								</div>
@@ -2795,7 +2795,7 @@ function pictureSaved() {
 							</div>
 							<div class="col-sm-4">
 								<button type="button" id="commentButton3" class="iconButton"
-									onclick=addComment("commentButton4");>
+									onclick=addComment("commentButton4","2.1");>
 									<img src="images/commenticon.png"
 										style="height: 50px; width: 50px" />
 								</button>
@@ -2848,7 +2848,7 @@ function pictureSaved() {
 							</div>
 							<div class="col-sm-4">
 								<button type="button" id="commentButton3" class="iconButton"
-									onclick=addComment("commentButton5");>
+									onclick=addComment("commentButton5","2.2");>
 									<img src="images/commenticon.png" id="scanImage" />
 								</button>
 							</div>
@@ -2917,7 +2917,7 @@ function pictureSaved() {
 							</div>
 							<div class="col-sm-4">
 								<button type="button" id="commentButton6" class="iconButton"
-									onclick=addComment("commentButton6");>
+									onclick=addComment("commentButton6","2.3");>
 									<img src="images/commenticon.png" id="scanImage" />
 								</button>
 							</div>
@@ -2960,7 +2960,7 @@ function pictureSaved() {
 							</div>
 							<div class="col-sm-4">
 								<button type="button" id="commentButton7" class="iconButton"
-									onclick=addComment("commentButton7");>
+									onclick=addComment("commentButton7,"3.1");>
 									<img src="images/commenticon.png" id="scanImage" />
 								</button>
 							</div>
@@ -2997,7 +2997,7 @@ function pictureSaved() {
 							</div>
 							<div class="col-sm-4">
 								<button type="button" id="commentButton8" class="iconButton"
-									onclick=addComment("commentButton8");>
+									onclick=addComment("commentButton8","3.2");>
 									<img src="images/commenticon.png" id="scanImage" />
 								</button>
 							</div>
@@ -3239,7 +3239,7 @@ function pictureSaved() {
 							</div>
 							<div class="col-sm-4">
 								<button type="button" id="commentButton12" onclick=addComment(
-									"commentButton12");  class="iconButton">
+									"commentButton12","4.1");  class="iconButton">
 									<img src="images/commenticon.png" id="scanImage" />
 								</button>
 							</div>
@@ -3292,7 +3292,7 @@ function pictureSaved() {
 							</div>
 							<div class="col-sm-4">
 								<button type="button" id="commentButton13" class="iconButton"
-									onclick=addComment( "commentButton13"); class="iconButton">
+									onclick=addComment( "commentButton13","4.2"); class="iconButton">
 									<img src="images/commenticon.png" id="scanImage" />
 								</button>
 							</div>
@@ -3356,7 +3356,7 @@ function pictureSaved() {
 							</div>
 							<div class="col-sm-4">
 								<button type="button" id="commentButton14" class="iconButton"
-									onclick=addComment("commentButton14");>
+									onclick=addComment("commentButton14","5.1");>
 									<img src="images/commenticon.png" id="scanImage" />
 								</button>
 							</div>
@@ -3409,7 +3409,7 @@ function pictureSaved() {
 							</div>
 							<div class="col-sm-4">
 								<button type="button" id="commentButton15" class="iconButton"
-									onclick=addComment("commentButton15");>
+									onclick=addComment("commentButton15","5.2");>
 									<img src="images/commenticon.png" id="scanImage" />
 								</button>
 							</div>
@@ -3504,12 +3504,47 @@ function pictureSaved() {
 		</div>
 	</div>
 	<script>
-var modal = document.getElementById('myModal');
-var btn = document.getElementById("myBtn");
-var span = document.getElementsByClassName("close")[0];
-function addComment(buttonID) {
-  modal.style.display = "block";
-}
+	var modal = document.getElementById('myModal');
+	var btn = document.getElementById("myBtn");
+	var span = document.getElementsByClassName("close")[0];
+	var x;
+	function addComment(buttonID,btnno) {
+		x=""+buttonID;
+		y=""+btnno;
+		document.getElementById("x");
+		document.getElementById("y");
+
+		
+	  modal.style.display = "block";
+	  alert(y);
+
+	  //*********************************************************
+	  
+	  
+	  
+	           
+
+			   
+
+	         $.ajax({
+	            url:'check',
+	            type:'get',
+	            data:{name:y},
+	            success:function(data){
+	               alert(data);
+	               $('#').text(responseText); 
+	            },
+	            
+	         }
+	    );  
+	  
+	  
+	  
+	  //**********************************************************
+
+	  }
+	  
+	  
 function closePopup()
 {
 popupText
@@ -3526,7 +3561,7 @@ window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
-}
+
 </script>
 </body>
 <script>
