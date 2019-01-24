@@ -2356,21 +2356,26 @@ button:disabled {
 	background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 }
 
+
+
 /* Modal Content */
 .modal-content {
 	background-color: #fefefe;
 	margin: auto;
-	padding: 20px;
 	border: 1px solid #888;
-	width: 60%;
+	min-width: 600px; /* Full width */
+	min-height: 400px;
 }
+
+
 
 /* The Close Button */
 .close {
-	color: #aaaaaa;
+	color: red;
 	float: right;
 	font-size: 28px;
 	font-weight: bold;
+	padding-left: 60px;
 }
 
 .close:hover, .close:focus {
@@ -2529,9 +2534,8 @@ function pictureSaved() {
 						<div class="col-sm-6">
 							<div class="col-sm-4" >
 
-								<button type="button" id="photoButton1" class="iconButton"
-									onclick=cameraOpen("photoButton1");
-									>
+								<button type="button" id="photoButton1.1" class="iconButton"
+									onclick=cameraOpen("photoButton1.1");>
 									<img src="images/cameraicon.png"
 										style="height: 50px; width: 50px" />
 								</button>
@@ -2585,8 +2589,8 @@ function pictureSaved() {
 						<div class="col-sm-6">
 							<div class="col-sm-4" >
 
-								<button type="button" id="photoButton2" class="iconButton"
-									onclick=cameraOpen("photoButton2"); >
+								<button type="button" id="photoButton1.2" class="iconButton"
+									onclick=cameraOpen("photoButton1.2"); >
 									<img src="images/cameraicon.png" id="scanImage" />
 								</button>
 
@@ -2636,7 +2640,8 @@ function pictureSaved() {
 								<div class='input-group date' id='timepicker1'
 									style="margin-top: 5px;">
 									<input type='text' class="form-control"
-										style="margin-top: 0px;" /> <span class="input-group-addon"
+										style="margin-top: 0px;
+										" /> <span class="input-group-addon"
 										id="watch"> <span class="glyphicon glyphicon-time"></span>
 									</span>
 								</div>
@@ -2688,8 +2693,8 @@ function pictureSaved() {
 							</div>
 							<div class="col-sm-6">
 								<div class="col-sm-4">
-									<button type="button" id="photoButton3" class="iconButton"
-										onclick=cameraOpen("photoButton2"); >
+									<button type="button" id="photoButton1.3" class="iconButton"
+										onclick=cameraOpen("photoButton1.2"); >
 										<img src="images/cameraicon.png"
 											style="height: 50px; width: 50px" />
 									</button>
@@ -2820,7 +2825,7 @@ function pictureSaved() {
 
 							</div>
 							<div class="col-sm-4">
-								<button type="button" id="commentButton3" class="iconButton"
+								<button type="button" id="commentButton5" class="iconButton"
 									onclick=addComment("commentButton5");>
 									<img src="images/commenticon.png" id="scanImage" />
 								</button>
@@ -3449,12 +3454,19 @@ function pictureSaved() {
 					</div>
 				</div>
 			</div>
-			<div class="col-sm-12">
+			<div class="col-sm-6">
+				
+					<button type="submit" id="cancelBtnLast"
+						class="btn btn-primary btn-block" onclick=addComment("cancelBtnLast");
+						style="margin-top: 20px; margin-bottom: 20px;">
+						CANCEL</button>
+				</div>
+			<div class="col-sm-6">
 				<div id="checkListOverview" onmouseleave="completedMouseLeave()"
 					onmouseover="completedMouseOver()">
 					<button type="submit" id="checkListCompleteButton"
 						class="btn btn-primary btn-block" onclick="completeChecklist()"
-						style="margin-top: 20px; margin-bottom: 20px;" id="normalFont">CHECKLIST
+						style="margin-top: 20px; margin-bottom: 20px;" id="normalFont">
 						COMPLETED</button>
 				</div>
 			</div>
@@ -3462,7 +3474,7 @@ function pictureSaved() {
 	</form>
 	<div id="myModal" class="modal">
 		<div class="modal-content" style="background-color: #D8CCCC;">
-			<span class="close">&times;</span>
+			<span class="close" >&times;</span>
 			<center>
 				<p style="font-weight: bold; font-size: 20px">ADD YOUR COMMENT</p>
 			</center>
@@ -3472,7 +3484,7 @@ function pictureSaved() {
 			</center>
 			<center>
 				<button type="button" onclick="closePopup()"
-					class="btn btn-success btn-block">Submit</button>
+					class="btn btn-success">Submit</button>
 			</center>
 		</div>
 	</div>
@@ -3480,13 +3492,15 @@ function pictureSaved() {
 	
 	<div id="myModalcam" class="modal">
 		<div class="modal-content" style="background-color: #D8CCCC;">
-			
-	<div id="results">Your captured image will appear here...</div>
-	<h1>WebcamJS Test Page</h1>
-	<h3>Demonstrates simple 320x240 capture &amp; display</h3>
+			<span class="close" id="clg" style="color: red;">&times;</span>
+		
+	<div id="results" style="padding:0; margin: 0;"></div>
 	
-	<div id="my_camera"></div>
+	<div id="my_camera" style="padding: 0; width: 100px;"> 
+	<h1>Click Image From Here</h1>
 	
+	</div>
+
 	<!-- First, include the Webcam.js JavaScript Library -->
 	<script type="text/javascript" src="webcam.min.js"></script>
 	
@@ -3496,7 +3510,7 @@ function pictureSaved() {
 			width: 320,
 			height: 240,
 			image_format: 'jpeg',
-			jpeg_quality: 90
+			jpeg_quality: 85
 		});
 	
 	</script>
@@ -3514,27 +3528,37 @@ function pictureSaved() {
 
 <script language="JavaScript">
 var cbtnid;
-
+var imageLink;
 		var dt = new Date();
 		var m =dt.getMinutes();
 		var s =dt.getSeconds();
 		function take_snapshot() {
 			// take snapshot and get image data
 			Webcam.snap( function(data_uri) {
+				imageLink =(data_uri);
+
 				// display results in page
 				alert(cbtnid);
 				document.getElementById('results').innerHTML = 
-					'<h2>Here is your image:</h2>' + 
-					'<img src="'+data_uri+'"/><br>'+
-					'<a href="'+data_uri+'" download="'+cbtnid+'" class="btn btn-info" onClick="closePopup2()">Download</a>'
+					'<img src="'+data_uri+'"/><br>'	;
+					
+				document.getElementById('results').innerHTML += 
+					'<div class="col-sm-6" style="margin: 20px; margin-left: 35%;">'+
+					'<a href="'+data_uri+'" download="'+cbtnid+'" class="btn btn-default" onClick="closePopup2()">Confirm</a></div>'
 					;
 			} );
+		}
+		
+		
+		function imageZoom(){
+			 localMediaStream.stop();
+			alert("wait");
 		}
 	
 var modal2 = document.getElementById('myModalcam');
 var btn = document.getElementById("myBtn");
 var span = document.getElementsByClassName("close")[0];
-
+var span = document.getElementsByClassName("close")[1]
 
 function cameraOpen(buttonId) {
 	document.getElementById('results').innerHTML ="";
@@ -3542,15 +3566,18 @@ function cameraOpen(buttonId) {
 	cbtnid=(buttonId);
 	alert(buttonId);
   modal2.style.display = "block";
-  $(btnid).prop("onclick", null).off("click");
 }
 
+
+
 function closePopup2(){
+	document.getElementById(cbtnid).innerHTML = '<img src="'+imageLink+'" style="height: 50px; width: 50px";/>';
+    document.getElementById(cbtnid ).setAttribute( "onClick", "window.open(imageZoom());" );
 	//var d='<img src="images/check.svg" title="Already Done" style="height: 50px; width: 50px" />';
 	// document.getElementById(btnid).innerHTML ='nk';
 	// document.getElementById(btnid).disabled = true;
 //document.getElementById("popupText").value = "";
-	 modal2.style.display = "none";
+	 modal2.style.display = "none";	 	
 }
 
 // When the user clicks on <span> (x), close the modal
@@ -3566,7 +3593,23 @@ window.onclick = function(event) {
 }
 </script>
 	
-	
+	<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('myImg');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+</script>
 
 	<script>
 	
@@ -3583,7 +3626,7 @@ function addComment(buttonID) {
 function closePopup(){
 	var d='<img src="images/check.svg" title="Already Done" style="height: 50px; width: 50px" />';
 	 document.getElementById(btnid).innerHTML =d;
-	 document.getElementById(btnid).disabled = true;
+	  document.getElementById(btnid ).setAttribute( "onClick", "onlyAlert();" );
 	 document.getElementById("popupText").value = "";
 	 modal.style.display = "none";
 }
@@ -3600,6 +3643,13 @@ window.onclick = function(event) {
   }
 }
 </script>
+
+<script>
+function onlyAlert(){
+	alert(Already Done);
+}
+</script>
+
 </body>
 <script>
 function scanData11EnableFunction(buttonID)
