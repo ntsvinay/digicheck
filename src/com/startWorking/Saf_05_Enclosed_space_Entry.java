@@ -359,7 +359,7 @@ public class Saf_05_Enclosed_space_Entry extends HttpServlet {
 				checklist_number = rs.getString(3);
 				SEC4_GAS_DIGI = "_gas_digi_" + checklist_name + "_" + checklist_number + "";
 //********************update table*******************************************	  
-//				up_safety_checklist_info();
+			up_safety_checklist_info();
 
 //********************************************************************************		  
 
