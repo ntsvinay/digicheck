@@ -25,7 +25,7 @@ overflow: scroll;
 </style>
 </head>
 
-<body style="background-color: #AED6F1">
+<body>
 
 	<div id="header"></div>
 	<div id="logincontent"></div>

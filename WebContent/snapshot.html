@@ -107,11 +107,14 @@
 			
 		}
 		
+		
 		function save_photo() {
 			Webcam.snap( function(data_uri) {
 				loadCanvas(data_uri);				
 				Webcam.reset();
 				document.getElementById('my_camera').style.display = 'none';
+				 var a = sessionStorage.getItem("4thcameraid");
+				    alert(a);
 			} );
 		}
 		 function loadCanvas(dataURL) {
@@ -148,6 +151,8 @@
 function closeWindow()
 {
 window.close();
+var canvas = safety3.jsp.document.getElementById("photoButton4");
+alert(canvas);
 }
 	</script>
 	<div class="col-sm-12" id="confirmCam">
