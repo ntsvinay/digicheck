@@ -359,13 +359,13 @@ public class Saf_05_Enclosed_space_Entry extends HttpServlet {
 				checklist_number = rs.getString(3);
 				SEC4_GAS_DIGI = "_gas_digi_" + checklist_name + "_" + checklist_number + "";
 //********************update table*******************************************	  
-			up_safety_checklist_info();
+			//up_safety_checklist_info();
 
 //********************************************************************************		  
 
 //**************************create table***********************************				
 				
-				  sec4_gas_digi(); sec4_scan_digi(); sec4_photo_digi(); user_scan_digi();
+				/*  sec4_gas_digi(); sec4_scan_digi(); sec4_photo_digi(); user_scan_digi();
 				  user_scan_in_out_digi(); complete_checklist();
 				 
 //**************************************table created************************
@@ -374,7 +374,7 @@ public class Saf_05_Enclosed_space_Entry extends HttpServlet {
 				
 				  insert_sec4_gas_digi(); insert_sec4_scan_digi(); insert_user_photo_digi();
 				  insert_user_scan_digi(); insert_user_scan_in_out_digi();
-				 
+				 */
 //----------------table inserted---------------------------------------------------------			 
 
 			} else {
