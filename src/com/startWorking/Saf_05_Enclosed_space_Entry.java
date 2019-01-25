@@ -357,7 +357,7 @@ public class Saf_05_Enclosed_space_Entry extends HttpServlet {
 			if (rs.next()) {
 				checklist_name = rs.getString(2);
 				checklist_number = rs.getString(3);
-				SEC4_GAS_DIGI = "_gas_digi_" + checklist_name + "_" + checklist_number + "";
+/*				SEC4_GAS_DIGI = "_gas_digi_" + checklist_name + "_" + checklist_number + "";
 //********************update table*******************************************	  
 			up_safety_checklist_info();
 
@@ -376,7 +376,7 @@ public class Saf_05_Enclosed_space_Entry extends HttpServlet {
 				  insert_user_scan_digi(); insert_user_scan_in_out_digi();
 				 
 //----------------table inserted---------------------------------------------------------			 
-
+*/
 			} else {
 				System.out.println("no data found");
 			}
