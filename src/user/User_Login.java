@@ -51,8 +51,8 @@ public class User_Login extends HttpServlet {
 		System.out.println("post method");
 		
 		
-		email = request.getParameter("email");
-		password = request.getParameter("password");
+		email = request.getParameter("name");
+		password = request.getParameter("pass");
 		try {
 			PrintWriter out = response.getWriter();
 			Class.forName("oracle.jdbc.driver.OracleDriver");
@@ -66,7 +66,7 @@ System.out.println(sql);
 				
 				
 				System.out.println("Username or Password correct");
-				RequestDispatcher rd = request.getRequestDispatcher("Includehome.jsp");
+				RequestDispatcher rd = request.getRequestDispatcher("includehome.jsp");
 				rd.forward(request, response);
 			} 
 			else 

@@ -49,6 +49,7 @@ public class Confirm_Image extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		
 		// TODO Auto-generated method stub
 		
 		/* response.setContentType("text/html");  
@@ -72,7 +73,7 @@ public class Confirm_Image extends HttpServlet {
 		java.util.Date date = new java.util.Date(millis);
 		c_time_date = date.toString();
 		file_name_type = c_time_date.replaceAll("[^a-zA-Z0-9]+", "_");
-		Path temp = Files.move(Paths.get("C:\\Users\\VinayNTS2018\\Downloads\\download"),
+		Path temp = Files.move(Paths.get("C:\\Users\\VinayNTS2018\\Downloads\\download.jpg"),
 				Paths.get("D:\\Other\\Wallpaper\\" + file_name_type + ".jpg"));
 
 		if (temp != null) {
