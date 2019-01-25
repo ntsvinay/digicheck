@@ -1859,6 +1859,8 @@ function sec4_scan_btn8(buttonID,showDataDivID)
 						}
 </script>
 <!-- **** end of sec4 scan buttons&&&&& photo button is start **** -->
+<<<<<<< HEAD
+=======
 <script>
 var b_id;
 var divID;
@@ -1881,8 +1883,318 @@ function passDatafromPhotoButton(buttonID,showDataDivID,img)
 								});
 						}
 </script>
+<<<<<<< HEAD
+=======
+<script>
+var b_id;
+var divID;
+function photo_btn1(buttonID,showDataDivID,img)
+{
+	var queryString = '?xmlData='+'1.1';
+	var url="snapshot.jsp" + queryString;
+	newWindow=window.open(url,'jsp','name','height=800,width=800');
+	
+	var disableDivID="#"+buttonID+"DisableDiv"+" :input";
+	divID="#"+showDataDivID;
+	b_id="#"+buttonID;
+
+						
+						$(divID).css("color", "blue");
+						//document.getElementById(divID).style.color = "blue";
+						$
+						.get(
+								"##",
+								function(responseText) {
+									$(divID).text(responseText);
+									
+								});
+						}
+</script>
+<script>
+var b_id;
+var divID;
+function photo_btn2(buttonID,showDataDivID,img)
+{
+	////(buttonID+" "+showDataDivID+" "+img);
+	var queryString = '?xmlData='+'1.2';
+	var url="snapshot.jsp" + queryString;
+	newWindow=window.open(url,'jsp','name','height=800,width=800');
+	
+	var disableDivID="#"+buttonID+"DisableDiv"+" :input";
+	divID="#"+showDataDivID;
+	b_id="#"+buttonID;
+						$(divID).css("color", "blue");
+						//document.getElementById(divID).style.color = "blue";
+						$
+						.get(
+								"Image_btn2",
+								function(responseText) {
+									$(divID).text(responseText);
+									
+								});
+						}
+</script>
+<script>
+var b_id;
+var divID;
+function photo_btn3(buttonID,showDataDivID,img)
+{
+	////(buttonID+" "+showDataDivID+" "+img);
+	var queryString = '?xmlData='+'1.3';
+	var url="snapshot.jsp" + queryString;
+	newWindow=window.open(url,'jsp','name','height=800,width=800');
+	
+	var disableDivID="#"+buttonID+"DisableDiv"+" :input";
+	divID="#"+showDataDivID;
+	b_id="#"+buttonID;
+
+						//$(divID).text("please confirm image");
+						$(divID).css("color", "blue");
+						//document.getElementById(divID).style.color = "blue";
+						$
+						.get(
+								"Image_btn3",
+								function(responseText) {
+									$(divID).text(responseText);
+									
+								});
+						}
+</script>
+<script>
+var b_id;
+var divID;
+var camerabuttonId
+function photo_btn4(buttonID,showDataDivID,img)
+{
+	////(buttonID+" "+showDataDivID+" "+img);
+	var queryString = '?xmlData='+'2.1';
+<<<<<<< HEAD
+	camerabuttonId =(buttonID);
+	var url="snapshot.html" + queryString;
+	newWindow=window.open(url,'html','name','height=800,width=800');
+=======
+	var url="snapshot.jsp" + queryString;
+	newWindow=window.open(url,'jsp','name','height=800,width=800');
+>>>>>>> 453f3a0343803a21e0ca0d068deaf3ff70696bf6
+	
+	var disableDivID="#"+buttonID+"DisableDiv"+" :input";
+	divID="#"+showDataDivID;
+	b_id="#"+buttonID;
+
+						//$(divID).text("please confirm image");
+						$(divID).css("color", "blue");
+						//document.getElementById(divID).style.color = "blue";
+<<<<<<< HEAD
+						
+						
+=======
+						$
+						.get(
+								"Image_btn4",
+								function(responseText) {
+									$(divID).text(responseText);
+									
+								});
+>>>>>>> 453f3a0343803a21e0ca0d068deaf3ff70696bf6
+						}
+</script>
+<script>
+var b_id;
+var divID;
+function photo_btn5(buttonID,showDataDivID,img)
+{
+	////(buttonID+" "+showDataDivID+" "+img);
+	
+	var queryString = '?xmlData='+'2.2';
+	var url="snapshot.jsp" + queryString;
+	newWindow=window.open(url,'jsp','name','height=800,width=800');
+	
+	var disableDivID="#"+buttonID+"DisableDiv"+" :input";
+	divID="#"+showDataDivID;
+	b_id="#"+buttonID;
+
+						//$(divID).text("please confirm image");
+						$(divID).css("color", "blue");
+						//document.getElementById(divID).style.color = "blue";
+						$
+						.get(
+								"Image_btn5",
+								function(responseText) {
+									$(divID).text(responseText);
+									
+								});
+						}
+</script>
+<script>
+var b_id;
+var divID;
+function photo_btn6(buttonID,showDataDivID,img)
+{
+	////(buttonID+" "+showDataDivID+" "+img);
+	var queryString = '?xmlData='+'2.3';
+	var url="snapshot.jsp" + queryString;
+	newWindow=window.open(url,'jsp','name','height=800,width=800');
+	
+	var disableDivID="#"+buttonID+"DisableDiv"+" :input";
+	divID="#"+showDataDivID;
+	b_id="#"+buttonID;
+
+						//$(divID).text("please confirm image");
+						$(divID).css("color", "blue");
+						//document.getElementById(divID).style.color = "blue";
+						$
+						.get(
+								"Image_btn6",
+								function(responseText) {
+									$(divID).text(responseText);
+									
+								});
+						}
+</script>
+<script>
+var b_id;
+var divID;
+function photo_btn7(buttonID,showDataDivID,img)
+{
+	////(buttonID+" "+showDataDivID+" "+img);
+	var queryString = '?xmlData='+'3.1';
+	var url="snapshot.jsp" + queryString;
+	newWindow=window.open(url,'jsp','name','height=800,width=800');
+	
+	var disableDivID="#"+buttonID+"DisableDiv"+" :input";
+	divID="#"+showDataDivID;
+	b_id="#"+buttonID;
+
+						//$(divID).text("please confirm image");
+						$(divID).css("color", "blue");
+						//document.getElementById(divID).style.color = "blue";
+						$
+						.get(
+								"Image_btn7",
+								function(responseText) {
+									$(divID).text(responseText);
+									
+								});
+						}
+</script>
+<script>
+var b_id;
+var divID;
+function photo_btn8(buttonID,showDataDivID,img)
+{
+	//(buttonID+" "+showDataDivID+" "+img);
+	var disableDivID="#"+buttonID+"DisableDiv"+" :input";
+	divID="#"+showDataDivID;
+	b_id="#"+buttonID;
+
+						//$(divID).text("please confirm image");
+						$(divID).css("color", "blue");
+						//document.getElementById(divID).style.color = "blue";
+						$
+						.get(
+								"Image_btn8",
+								function(responseText) {
+									$(divID).text(responseText);
+									
+								});
+						}
+</script>
+<script>
+var b_id;
+var divID;
+function photo_btn9(buttonID,showDataDivID,img)
+{
+	////(buttonID+" "+showDataDivID+" "+img);
+	var disableDivID="#"+buttonID+"DisableDiv"+" :input";
+	divID="#"+showDataDivID;
+	b_id="#"+buttonID;
+
+						//$(divID).text("please confirm image");
+						$(divID).css("color", "blue");
+						//document.getElementById(divID).style.color = "blue";
+						$
+						.get(
+								"Image_btn9",
+								function(responseText) {
+									$(divID).text(responseText);
+									
+								});
+						}
+</script>
+<script>
+var b_id;
+var divID;
+function photo_btn10(buttonID,showDataDivID,img)
+{
+	////(buttonID+" "+showDataDivID+" "+img);
+	var disableDivID="#"+buttonID+"DisableDiv"+" :input";
+	divID="#"+showDataDivID;
+	b_id="#"+buttonID;
+
+						$(divID).text("please confirm image");
+						$(divID).css("color", "blue");
+						//document.getElementById(divID).style.color = "blue";
+						$
+						.get(
+								"Image_btn10",
+								function(responseText) {
+									$(divID).text(responseText);
+									
+								});
+						}
+</script>
+<script>
+var b_id;
+var divID;
+function photo_btn31(buttonID,showDataDivID,img)
+{
+	////(buttonID+" "+showDataDivID+" "+img);
+	var disableDivID="#"+buttonID+"DisableDiv"+" :input";
+	divID="#"+showDataDivID;
+	b_id="#"+buttonID;
+
+						//$(divID).text("please confirm image");
+						$(divID).css("color", "blue");
+						//document.getElementById(divID).style.color = "blue";
+						$
+						.get(
+								"Image_btn31",
+								function(responseText) {
+									$(divID).text(responseText);
+									
+								});
+						}
+</script>
+<script>
+var b_id;
+var divID;
+function photo_btn32(buttonID,showDataDivID,img)
+{
+	////(buttonID+" "+showDataDivID+" "+img);
+	var disableDivID="#"+buttonID+"DisableDiv"+" :input";
+	divID="#"+showDataDivID;
+	b_id="#"+buttonID;
+
+						//$(divID).text("please confirm image");
+						$(divID).css("color", "blue");
+						//document.getElementById(divID).style.color = "blue";
+						$
+						.get(
+								"Image_btn32",
+								function(responseText) {
+									$(divID).text(responseText);
+									
+								});
+						}
+ 
 
 
+</script>
+<!-- **********end of image button calling ***********************-->
+>>>>>>> 2e4f7fc3943e1c083089fef3305bf00713d292e8
+
+
+>>>>>>> b3081968c581651e4a05f487bbf63a5e727a7296
 <style>
 #heading {
 	color: black;
@@ -2228,8 +2540,19 @@ function pictureSaved() {
 						<div class="col-sm-6">
 							<div class="col-sm-4" >
 
+<<<<<<< HEAD
 								<button type="button" id="photoButton1" class="iconButton"
 									onclick=cameraOpen("photoButton1");>
+=======
+<<<<<<< HEAD
+								<button type="button" id="photoButton1" class="iconButton"
+									onclick=cameraOpen("photoButton1","1.1");
+									>
+=======
+								<button type="button" id="photoButton1.1" class="iconButton"
+									onclick=cameraOpen("photoButton1.1");>
+>>>>>>> b3081968c581651e4a05f487bbf63a5e727a7296
+>>>>>>> 2e4f7fc3943e1c083089fef3305bf00713d292e8
 									<img src="images/cameraicon.png"
 										style="height: 50px; width: 50px" />
 								</button>
@@ -2283,8 +2606,18 @@ function pictureSaved() {
 						<div class="col-sm-6">
 							<div class="col-sm-4" >
 
+<<<<<<< HEAD
 								<button type="button" id="photoButton2" class="iconButton"
 									onclick=cameraOpen("photoButton2"); >
+=======
+<<<<<<< HEAD
+								<button type="button" id="photoButton2" class="iconButton"
+									onclick=cameraOpen("photoButton2","1.2"); >
+=======
+								<button type="button" id="photoButton1.2" class="iconButton"
+									onclick=cameraOpen("photoButton1.2"); >
+>>>>>>> b3081968c581651e4a05f487bbf63a5e727a7296
+>>>>>>> 2e4f7fc3943e1c083089fef3305bf00713d292e8
 									<img src="images/cameraicon.png" id="scanImage" />
 								</button>
 
@@ -2387,8 +2720,18 @@ function pictureSaved() {
 							</div>
 							<div class="col-sm-6">
 								<div class="col-sm-4">
+<<<<<<< HEAD
 									<button type="button" id="photoButton3" class="iconButton"
 										onclick=cameraOpen("photoButton3"); >
+=======
+<<<<<<< HEAD
+									<button type="button" id="photoButton3" class="iconButton"
+										onclick=cameraOpen("photoButton2","1.3"); >
+=======
+									<button type="button" id="photoButton1.3" class="iconButton"
+										onclick=cameraOpen("photoButton1.2"); >
+>>>>>>> b3081968c581651e4a05f487bbf63a5e727a7296
+>>>>>>> 2e4f7fc3943e1c083089fef3305bf00713d292e8
 										<img src="images/cameraicon.png"
 											style="height: 50px; width: 50px" />
 									</button>
@@ -2915,9 +3258,16 @@ function pictureSaved() {
 
 							</div>
 							<div class="col-sm-4">
-
+<<<<<<< HEAD
+								<button type="button" id="commentButton12" onclick=addComment(
+									"commentButton12","4.1");  class="iconButton">
+=======
 								<button type="button" id="commentButton12" class="iconButton"
 								onclick=addComment("commentButton12");>
+<<<<<<< HEAD
+=======
+>>>>>>> 45fcb2f98dad80bc36914087631f0ba7e3b36356
+>>>>>>> 2e4f7fc3943e1c083089fef3305bf00713d292e8
 									<img src="images/commenticon.png" id="scanImage" />
 								</button>
 							</div>
@@ -3239,11 +3589,17 @@ var imageLink;
 
 				// display results in page
 				document.getElementById('results').innerHTML = 
+<<<<<<< HEAD
+					'<h2>Here is your image:</h2>' + 
+					'<img src="'+data_uri+'"/><br>'+
+					'<a href="'+data_uri+'" download=download class="btn btn-info" onClick="closePopup2()">Download</a>'
+=======
 					'<img src="'+data_uri+'"/><br>'	;
 					
 				document.getElementById('results').innerHTML += 
 					'<div class="col-sm-6" style="margin: 20px; margin-left: 35%;">'+
 					'<a href="'+data_uri+'" download="'+cbtnid+'" class="btn btn-default" onClick="closePopup2()">Confirm</a></div>'
+>>>>>>> b3081968c581651e4a05f487bbf63a5e727a7296
 					;
 			} );
 		}
@@ -3259,7 +3615,7 @@ var btn = document.getElementById("myBtn");
 var span = document.getElementsByClassName("close")[0];
 var span = document.getElementsByClassName("close")[1]
 
-function cameraOpen(buttonId) {
+function cameraOpen(abc,buttonId) {
 	document.getElementById('results').innerHTML ="";
 	Webcam.attach( '#my_camera' );
 	cbtnid=(buttonId);
@@ -3269,8 +3625,21 @@ function cameraOpen(buttonId) {
 
 
 function closePopup2(){
+<<<<<<< HEAD
+	$.ajax({
+        url:'Confirm_Image',
+        type:'get',
+        data:{name:cbtnid},
+        success:function(data){
+           alert(data);
+           $('#').text(responseText); 
+        },
+        
+     });
+=======
 	document.getElementById(cbtnid).innerHTML = '<img src="'+imageLink+'" style="height: 50px; width: 50px";/>';
     document.getElementById(cbtnid ).setAttribute( "onClick", "window.open(imageZoom());" );
+>>>>>>> b3081968c581651e4a05f487bbf63a5e727a7296
 	//var d='<img src="images/check.svg" title="Already Done" style="height: 50px; width: 50px" />';
 	// document.getElementById(btnid).innerHTML ='nk';
 	// document.getElementById(btnid).disabled = true;
@@ -3293,7 +3662,68 @@ window.onclick = function(event) {
 	var btnid;
 	
 
+<<<<<<< HEAD
 <script>
+=======
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+</script>
+
+	<script>
+<<<<<<< HEAD
+	var modal = document.getElementById('myModal');
+	var btn = document.getElementById("myBtn");
+	var span = document.getElementsByClassName("close")[0];
+	var x;
+	function addComment(buttonID,btnno) {
+		x=""+buttonID;
+		y=""+btnno;
+		document.getElementById("x");
+		document.getElementById("y");
+
+		
+	  modal.style.display = "block";
+	  alert(y);
+
+	  //*********************************************************
+	  
+	  
+	  
+	           
+
+			   
+
+	         $.ajax({
+	            url:'check',
+	            type:'get',
+	            data:{name:y},
+	            success:function(data){
+	               alert(data);
+	               $('#').text(responseText); 
+	            },
+	            
+	         }
+	    );  
+	  
+	  
+	  
+	  //**********************************************************
+
+	  }
+	  
+	  
+function closePopup()
+{
+popupText
+document.getElementById("popupText").value = "";
+  modal.style.display = "none";
+=======
+>>>>>>> 2e4f7fc3943e1c083089fef3305bf00713d292e8
 	
 var modal = document.getElementById('myModal');
 var btn = document.getElementById("myBtn");

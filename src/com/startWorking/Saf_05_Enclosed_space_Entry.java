@@ -357,7 +357,7 @@ public class Saf_05_Enclosed_space_Entry extends HttpServlet {
 			if (rs.next()) {
 				checklist_name = rs.getString(2);
 				checklist_number = rs.getString(3);
-				SEC4_GAS_DIGI = "_gas_digi_" + checklist_name + "_" + checklist_number + "";
+/*				SEC4_GAS_DIGI = "_gas_digi_" + checklist_name + "_" + checklist_number + "";
 //********************update table*******************************************	  
 			//up_safety_checklist_info();
 
@@ -365,18 +365,29 @@ public class Saf_05_Enclosed_space_Entry extends HttpServlet {
 
 //**************************create table***********************************				
 				
+<<<<<<< HEAD
 				//  sec4_gas_digi(); sec4_scan_digi(); sec4_photo_digi(); user_scan_digi();
 				//  user_scan_in_out_digi(); complete_checklist();
+=======
+				/*  sec4_gas_digi(); sec4_scan_digi(); sec4_photo_digi(); user_scan_digi();
+				  user_scan_in_out_digi(); complete_checklist();
+>>>>>>> 2e4f7fc3943e1c083089fef3305bf00713d292e8
 				 
 //**************************************table created************************
 
 //-------------------------------------------------------insert table-----------------------------------------------------------------			  
 				
+<<<<<<< HEAD
 				//  insert_sec4_gas_digi(); insert_sec4_scan_digi(); insert_user_photo_digi();
 				//  insert_user_scan_digi(); insert_user_scan_in_out_digi();
 				 
+=======
+				  insert_sec4_gas_digi(); insert_sec4_scan_digi(); insert_user_photo_digi();
+				  insert_user_scan_digi(); insert_user_scan_in_out_digi();
+				 */
+>>>>>>> 2e4f7fc3943e1c083089fef3305bf00713d292e8
 //----------------table inserted---------------------------------------------------------			 
-
+*/
 			} else {
 				System.out.println("no data found");
 			}
