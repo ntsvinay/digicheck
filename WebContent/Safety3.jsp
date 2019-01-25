@@ -437,12 +437,10 @@ function scan_btn1(buttonID,showDataDivID)
 											else {
 												var d='<img src="images/check.svg" id="checkButton" title="Already Done">';
 												  document.getElementById("scanbtndiv").innerHTML =d;
-												// var rdo1=document.getElementById("radiofirst");
-												$(disableDivID).attr('readonly', true);
+											
 												detailsRegistered();
-												
-												 var myRadios = $('radiofirst'); myRadios.not(':checked').prop('disabled',true);
 												getLocation(showDataDivID);
+												$(disableDivID).attr('readonly', true);
 												
 											}
 										});
@@ -600,7 +598,7 @@ function scan_btn5(buttonID,showDataDivID)
 											
 											else {
 												var d='<img src="images/check.svg" id="checkButton" title="Already Done">';
-												  document.getElementById("scanbtndiv4").innerHTML =d;
+												  document.getElementById("scanbtndiv5").innerHTML =d;
 												  getLocation(showDataDivID);
 												  detailsRegistered();
 												$(disableDivID).attr('readonly', true);
@@ -638,7 +636,7 @@ function scan_btn6(buttonID,showDataDivID)
 											
 											else {
 												var d='<img src="images/check.svg" id="checkButton" title="Already Done">';
-												  document.getElementById("scanbtndiv4").innerHTML =d;
+												  document.getElementById("scanbtndiv6").innerHTML =d;
 												  getLocation(showDataDivID);
 												  detailsRegistered();
 												$(b_id).css("background-color", "#5398CD");
@@ -677,7 +675,7 @@ function scan_btn7(buttonID,showDataDivID)
 											
 											else {
 												var d='<img src="images/check.svg" id="checkButton" title="Already Done">';
-												  document.getElementById("scanbtndiv4").innerHTML =d;
+												  document.getElementById("scanbtndiv7").innerHTML =d;
 												  getLocation(showDataDivID);
 												  detailsRegistered();
 												$(b_id).css("background-color", "#5398CD");
@@ -716,7 +714,7 @@ function scan_btn8(buttonID,showDataDivID)
 											
 											else {
 												var d='<img src="images/check.svg" id="checkButton" title="Already Done">';
-												  document.getElementById("scanbtndiv4").innerHTML =d;
+												  document.getElementById("scanbtndiv8").innerHTML =d;
 												  getLocation(showDataDivID);
 												  detailsRegistered();
 												$(b_id).css("background-color", "#5398CD");
@@ -755,7 +753,7 @@ function scan_btn9(buttonID,showDataDivID)
 											
 											else {
 												var d='<img src="images/check.svg" id="checkButton" title="Already Done">';
-												  document.getElementById("scanbtndiv4").innerHTML =d;
+												  document.getElementById("scanbtndiv9").innerHTML =d;
 												  getLocation(showDataDivID);
 												  detailsRegistered();
 												$(b_id).css("background-color", "#5398CD");
@@ -794,7 +792,7 @@ function scan_btn10(buttonID,showDataDivID)
 											
 											else {
 												var d='<img src="images/check.svg" id="checkButton" title="Already Done">';
-												  document.getElementById("scanbtndiv4").innerHTML =d;
+												  document.getElementById("scanbtndiv10").innerHTML =d;
 												  getLocation(showDataDivID);
 												  detailsRegistered();
 												$(disableDivID).attr('readonly', true);
@@ -832,7 +830,7 @@ function scan_btn11(buttonID,showDataDivID)
 											
 											else {
 												var d='<img src="images/check.svg" id="checkButton" title="Already Done">';
-												  document.getElementById("scanbtndiv4").innerHTML =d;
+												  document.getElementById("scanbtndiv11").innerHTML =d;
 												  getLocation(showDataDivID);
 												  detailsRegistered();
 												$(disableDivID).attr('readonly', true);
@@ -870,7 +868,7 @@ function scan_btn12(buttonID,showDataDivID)
 											
 											else {
 												var d='<img src="images/check.svg" id="checkButton" title="Already Done">';
-												  document.getElementById("scanbtndiv4").innerHTML =d;
+												  document.getElementById("scanbtndiv12").innerHTML =d;
 												  getLocation(showDataDivID);
 												  detailsRegistered();
 												$(disableDivID).attr('readonly', true);
@@ -908,7 +906,7 @@ function scan_btn13(buttonID,showDataDivID)
 											
 											else {
 												var d='<img src="images/check.svg" id="checkButton" title="Already Done">';
-												  document.getElementById("scanbtndiv4").innerHTML =d;
+												  document.getElementById("scanbtndiv13").innerHTML =d;
 												  getLocation(showDataDivID);
 												  detailsRegistered();
 												$(disableDivID).attr('readonly', true);
@@ -946,7 +944,7 @@ function scan_btn14(buttonID,showDataDivID)
 											
 											else {
 												var d='<img src="images/check.svg" id="checkButton" title="Already Done">';
-												  document.getElementById("scanbtndiv4").innerHTML =d;
+												  document.getElementById("scanbtndiv14").innerHTML =d;
 												  getLocation(showDataDivID);
 												  detailsRegistered();
 												$(disableDivID).attr('readonly', true);
@@ -984,7 +982,7 @@ function scan_btn15(buttonID,showDataDivID)
 											
 											else {
 												var d='<img src="images/check.svg" id="checkButton" title="Already Done">';
-												  document.getElementById("scanbtndiv4").innerHTML =d;
+												  document.getElementById("scanbtndiv15").innerHTML =d;
 												  getLocation(showDataDivID);
 												  detailsRegistered();
 												$(disableDivID).attr('readonly', true);
@@ -1022,7 +1020,7 @@ function scan_btn16(buttonID,showDataDivID)
 											
 											else {
 												var d='<img src="images/check.svg" id="checkButton" title="Already Done">';
-												  document.getElementById("scanbtndiv4").innerHTML =d;
+												  document.getElementById("scanbtndiv16").innerHTML =d;
 												  getLocation(showDataDivID);
 												  detailsRegistered();
 												$(disableDivID).attr('readonly', true);
@@ -1061,7 +1059,7 @@ function scan_btn17(buttonID,showDataDivID)
 											
 											else {
 												var d='<img src="images/check.svg" id="checkButton" title="Already Done">';
-												  document.getElementById("scanbtndiv4").innerHTML =d;
+												  document.getElementById("scanbtndiv17").innerHTML =d;
 												  getLocation(showDataDivID);
 												  detailsRegistered();
 												$(disableDivID).attr('readonly', true);
@@ -1980,7 +1978,6 @@ function photo_btn4(buttonID,showDataDivID,img)
 						
 						
 						
->>>>>>> 453f3a0343803a21e0ca0d068deaf3ff70696bf6
 						}
 </script>
 <script>
@@ -2352,8 +2349,8 @@ button:disabled {
 	background-color: #fefefe;
 	margin: auto;
 	border: 1px solid #888;
-	min-width: 600px; /* Full width */
-	min-height: 400px;
+	width: 70%; /* Full width */
+	min-height: 480px;
 }
 
 
@@ -2523,8 +2520,8 @@ function pictureSaved() {
 						<div class="col-sm-6">
 							<div class="col-sm-4" >
 
-								<button type="button" id="photoButton1.1" class="iconButton"
-									onclick=cameraOpen("photoButton1.1");>
+								<button type="button" id="photoButton1" class="iconButton"
+									onclick=cameraOpen("photoButton1");>
 									<img src="images/cameraicon.png"
 										style="height: 50px; width: 50px" />
 								</button>
@@ -2532,7 +2529,7 @@ function pictureSaved() {
 							</div>
 							<div class="col-sm-4"  id="done">
 								<button type="button" id="commentButton1" class="iconButton"
-									onclick=addComment("commentButton1","1.1");>
+									onclick=addComment("commentButton1");>
 									<img src="images/commenticon.png"
 										style="height: 50px; width: 50px" />
 								</button>
@@ -2578,15 +2575,15 @@ function pictureSaved() {
 						<div class="col-sm-6">
 							<div class="col-sm-4" >
 
-								<button type="button" id="photoButton1.2" class="iconButton"
-									onclick=cameraOpen("photoButton1.2"); >
+								<button type="button" id="photoButton2" class="iconButton"
+									onclick=cameraOpen("photoButton2"); >
 									<img src="images/cameraicon.png" id="scanImage" />
 								</button>
 
 							</div>
 							<div class="col-sm-4" id="done2">
 								<button type="button" id="commentButton2" class="iconButton"
-									onclick=addComment("commentButton2","1.2");>
+									onclick=addComment("commentButton2");>
 									<img src="images/commenticon.png" id="scanImage" />
 								</button>
 
@@ -2682,8 +2679,8 @@ function pictureSaved() {
 							</div>
 							<div class="col-sm-6">
 								<div class="col-sm-4">
-									<button type="button" id="photoButton1.3" class="iconButton"
-										onclick=cameraOpen("photoButton1.2"); >
+									<button type="button" id="photoButton3" class="iconButton"
+										onclick=cameraOpen("photoButton3"); >
 										<img src="images/cameraicon.png"
 											style="height: 50px; width: 50px" />
 									</button>
@@ -2691,7 +2688,7 @@ function pictureSaved() {
 								<div class="col-sm-4" id="done3" >
 
 									<button type="button" id="commentButton3" class="iconButton"
-										onclick=addComment("commentButton3","1.3");>
+										onclick=addComment("commentButton3");>
 										<img src="images/commenticon.png" id="scanImage" />
 									</button>
 								</div>
@@ -2754,21 +2751,17 @@ function pictureSaved() {
 						<div class="col-sm-6">
 							<div class="col-sm-4">
 								<button type="button" id="photoButton4" class="iconButton"
-									onclick=photo_btn4("photoButton4","pic4_Loc","image4");
-									>
+									onclick=cameraOpen("photoButton4");>
 									<img src="images/cameraicon.png">
 								</button>
 
 							</div>
-<<<<<<< HEAD
-							<div class="col-sm-4">
-								<button type="button" id="commentButton3" class="iconButton"
-									onclick=addComment("commentButton4","2.1");>
-=======
+
+				
+							
 							<div class="col-sm-4" id="done4">
 								<button type="button" id="commentButton4" class="iconButton"
 									onclick=addComment("commentButton4");>
->>>>>>> 45fcb2f98dad80bc36914087631f0ba7e3b36356
 									<img src="images/commenticon.png"
 										style="height: 50px; width: 50px" />
 								</button>
@@ -2779,15 +2772,17 @@ function pictureSaved() {
 									<img src="images/scanicon.png" id="scanImage" />
 								</button>
 							</div>
-						</div>
 					</div>
+					</div>
+					</div>
+						</div>
 					<div class="col-sm-12">
 						<div class="col-sm-7">
 							<b><p id="hide4"></p></b>
 						</div>
 					</div>
-				</div>
-			</div>
+
+		
 			<div id="scanData5DisableDiv">
 				<div class="col-sm-12" id="mainLine">
 					<div class="col-sm-5" id="normalFont">I AGREED AND UNDERSTAND
@@ -2814,24 +2809,20 @@ function pictureSaved() {
 							<div class="col-sm-4">
 
 								<button type="button" id="photoButton5" class="iconButton"
-									onclick=photo_btn5("photoButton5","pic5_Loc","image5");>
+									onclick=cameraOpen("photoButton5");>
 									<img src="images/cameraicon.png" id="scanImage">
 								</button>
 
 							</div>
 							<div class="col-sm-4">
-<<<<<<< HEAD
+							
 								<button type="button" id="commentButton5" class="iconButton"
 									onclick=addComment("commentButton5");>
-=======
-								<button type="button" id="commentButton3" class="iconButton"
-									onclick=addComment("commentButton5","2.2");>
->>>>>>> 2ae407c5d3e56fb0763134c183825c58c792f3a9
 									<img src="images/commenticon.png" id="scanImage" />
 								</button>
 							</div>
 
-							<div class="col-sm-4">
+							<div class="col-sm-4" id="scanbtndiv5">
 								<button type="button" id="scanData5" class="iconButton"
 									onclick=scan_btn5("scanData5","hide5");>
 									<img src="images/scanicon.png" id="scanImage" />
@@ -2886,8 +2877,8 @@ function pictureSaved() {
 						<div class="col-sm-6 ">
 							<div class="col-sm-4">
 
-								<button type="button" id="photoButton" class="iconButton"
-									onclick=photo_btn6("photoButton6","pic6_Loc","image6");
+								<button type="button" id="photoButton6" class="iconButton"
+									onclick=cameraOpen("photoButton6");
 									>
 									<img src="images/cameraicon.png" id="scanImage">
 								</button>
@@ -2895,12 +2886,12 @@ function pictureSaved() {
 							</div>
 							<div class="col-sm-4">
 								<button type="button" id="commentButton6" class="iconButton"
-									onclick=addComment("commentButton6","2.3");>
+									onclick=addComment("commentButton6");>
 									<img src="images/commenticon.png" id="scanImage" />
 								</button>
 							</div>
 
-							<div class="col-sm-4">
+							<div class="col-sm-4" id="scanbtndiv6">
 								<button type="button" id="scanData6" class="iconButton"
 									onclick=scan_btn6("scanData6","hide6");>
 									<img src="images/scanicon.png" id="scanImage" />
@@ -2931,19 +2922,19 @@ function pictureSaved() {
 							<div class="col-sm-4">
 
 								<button type="button" id="photoButton7" class="iconButton"
-									onclick=photo_btn7("photoButton7","pic7_Loc","image7");
+									onclick=cameraOpen("photoButton7");
 									>
 									<img src="images/cameraicon.png">
 								</button>
 							</div>
 							<div class="col-sm-4">
 								<button type="button" id="commentButton7" class="iconButton"
-									onclick=addComment("commentButton7,"3.1");>
+									onclick=addComment("commentButton7");>
 									<img src="images/commenticon.png" id="scanImage" />
 								</button>
 							</div>
 
-							<div class="col-sm-4">
+							<div class="col-sm-4" id="scanbtndiv7">
 								<button type="button" id="scanData7" class="iconButton"
 									onclick=scan_btn7("scanData7","hide7");>
 									<img src="images/scanicon.png" id="scanImage" />
@@ -2968,18 +2959,18 @@ function pictureSaved() {
 							<div class="col-sm-4">
 
 								<button type="button" id="photoButton8" class="iconButton"
-									onclick=photo_btn8("photoButton8","pic8_Loc","image8"); >
+									onclick=cameraOpen("photoButton8"); >
 									<img src="images/cameraicon.png" id="scanImage">
 								</button>
 
 							</div>
 							<div class="col-sm-4">
 								<button type="button" id="commentButton8" class="iconButton"
-									onclick=addComment("commentButton8","3.2");>
+									onclick=addComment("commentButton8");>
 									<img src="images/commenticon.png" id="scanImage" />
 								</button>
 							</div>
-							<div class="col-sm-4">
+							<div class="col-sm-4" id="scanbtndiv8">
 								<button type="button" id="scanData8" class="iconButton"
 									onclick=scan_btn8("scanData8","hide8");>
 									<img src="images/scanicon.png" id="scanImage" />
@@ -3158,9 +3149,9 @@ function pictureSaved() {
 
 								<div class="col-sm-4"></div>
 								<div class="col-sm-4"></div>
-								<div class="col-sm-4">
+								<div class="col-sm-4" id="scanbtndiv11">
 									<button type="button" id="scanData11" class="iconButton"
-										onclick=scan_btn12("scanData11","hide11"); >
+										onclick=scan_btn11("scanData11","hide11"); >
 										<img src="images/scanicon.png" id="scanImage" />
 									</button>
 								</div>
@@ -3210,7 +3201,7 @@ function pictureSaved() {
 							<div class="col-sm-4">
 
 								<button type="button" id="photoButton9" class="iconButton"
-									onclick=photo_btn9("photoButton9","pic9_Loc","image9");>
+									onclick=cameraOpen("photoButton9");>
 									<img src="images/cameraicon.png" />
 								</button>
 
@@ -3218,11 +3209,11 @@ function pictureSaved() {
 							<div class="col-sm-4">
 
 								<button type="button" id="commentButton12" class="iconButton"
-								onclick=addComment("commentButton12");
+								onclick=addComment("commentButton12");>
 									<img src="images/commenticon.png" id="scanImage" />
 								</button>
 							</div>
-							<div class="col-sm-4">
+							<div class="col-sm-4" id="scanbtndiv12">
 								<button type="button" id="scanData12" class="iconButton"
 									onclick=scan_btn12("scanData12","hide12");>
 									<img src="images/scanicon.png" id="scanImage" />
@@ -3263,24 +3254,19 @@ function pictureSaved() {
 							<div class="col-sm-4">
 
 								<button type="button" id="photoButton10" class="iconButton"
-									onclick=photo_btn10("photoButton10","pic10_Loc","image10");
+									onclick=cameraOpen("photoButton10");
 									>
 									<img src="images/cameraicon.png">
 								</button>
 
 							</div>
 							<div class="col-sm-4">
-<<<<<<< HEAD
-								<button type="button" id="commentButton13" class="iconButton"
-									onclick=addComment( "commentButton13","4.2"); class="iconButton">
-=======
 									<button type="button" id="commentButton13" class="iconButton"
 								onclick=addComment("commentButton13");>
->>>>>>> 45fcb2f98dad80bc36914087631f0ba7e3b36356
 									<img src="images/commenticon.png" id="scanImage" />
 								</button>
 							</div>
-							<div class="col-sm-4">
+							<div class="col-sm-4" id="scanbtndiv13">
 								<button type="button" id="scanData13" class="iconButton"
 									onclick=scan_btn13("scanData13","hide13");>
 									<img src="images/scanicon.png" id="scanImage" />
@@ -3332,7 +3318,7 @@ function pictureSaved() {
 							<div class="col-sm-4">
 
 								<button type="button" id="photoButton31" class="iconButton"
-									onclick=photo_btn31("photoButton31","pic31_Loc","image31");
+									onclick=cameraOpen("photoButton31");
 									>
 									<img src="images/cameraicon.png">
 								</button>
@@ -3340,11 +3326,11 @@ function pictureSaved() {
 							</div>
 							<div class="col-sm-4">
 								<button type="button" id="commentButton14" class="iconButton"
-									onclick=addComment("commentButton14","5.1");>
+									onclick=addComment("commentButton14");>
 									<img src="images/commenticon.png" id="scanImage" />
 								</button>
 							</div>
-							<div class="col-sm-4">
+							<div class="col-sm-4" id="scanbtndiv14">
 								<button type="button" id="scanData14" class="iconButton"
 									onclick=scan_btn14("scanData14","hide14");>
 									<img src="images/scanicon.png" id="scanImage" />
@@ -3385,7 +3371,7 @@ function pictureSaved() {
 							<div class="col-sm-4">
 
 								<button type="button" id="photoButton32" class="iconButton"
-									onclick=photo_btn32("photoButton32","pic32_Loc","image32");
+									onclick=cameraOpen("photoButton32");
 									>
 									<img src="images/cameraicon.png">
 								</button>
@@ -3393,11 +3379,11 @@ function pictureSaved() {
 							</div>
 							<div class="col-sm-4">
 								<button type="button" id="commentButton15" class="iconButton"
-									onclick=addComment("commentButton15","5.2");>
+									onclick=addComment("commentButton15");>
 									<img src="images/commenticon.png" id="scanImage" />
 								</button>
 							</div>
-							<div class="col-sm-4">
+							<div class="col-sm-4" id="scanbtndiv15">
 								<button type="button" id="scanData15" class="iconButton"
 									onclick=scan_btn15("scanData15","hide15");>
 									<img src="images/scanicon.png" id="scanImage" />
@@ -3421,7 +3407,7 @@ function pictureSaved() {
 						<div class="col-sm-6">
 							<div class="col-sm-4"></div>
 							<div class="col-sm-4"></div>
-							<div class="col-sm-4">
+							<div class="col-sm-4" id="scanbtndiv16">
 								<button type="button" id="scanData16" class="iconButton"
 									onclick=scan_btn16("scanData16","hide16"); >
 									<img src="images/scanicon.png" id="scanImage" />
@@ -3445,7 +3431,7 @@ function pictureSaved() {
 						<div class="col-sm-6">
 							<div class="col-sm-4 "></div>
 							<div class="col-sm-4 "></div>
-							<div class="col-sm-4">
+							<div class="col-sm-4" id="scanbtndiv17">
 								<button type="button" id="scanData17" class="iconButton"
 									onclick=scan_btn17("scanData17","hide17"); >
 									<img src="images/scanicon.png" id="scanImage" />
@@ -3513,8 +3499,8 @@ function pictureSaved() {
 	<!-- Configure a few settings and attach camera -->
 	<script language="JavaScript">
 		Webcam.set({
-			width: 320,
-			height: 240,
+			width: 420,
+			height: 350,
 			image_format: 'jpeg',
 			jpeg_quality: 85
 		});
@@ -3544,7 +3530,6 @@ var imageLink;
 				imageLink =(data_uri);
 
 				// display results in page
-				alert(cbtnid);
 				document.getElementById('results').innerHTML = 
 					'<img src="'+data_uri+'"/><br>'	;
 					
@@ -3570,7 +3555,6 @@ function cameraOpen(buttonId) {
 	document.getElementById('results').innerHTML ="";
 	Webcam.attach( '#my_camera' );
 	cbtnid=(buttonId);
-	alert(buttonId);
   modal2.style.display = "block";
 }
 
@@ -3594,95 +3578,31 @@ span.onclick = function() {
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
   if (event.target == modal) {
-    modal2.style.display = "none";
+    modal.style.display = "none";
   }
 }
 </script>
+	var btnid;
 	
-	<script>
-// Get the modal
+
+<script>
+	
 var modal = document.getElementById('myModal');
-
-// Get the image and insert it inside the modal - use its "alt" text as a caption
-var img = document.getElementById('myImg');
-var modalImg = document.getElementById("img01");
-var captionText = document.getElementById("caption");
-
-// Get the <span> element that closes the modal
+var btn = document.getElementById("myBtn");
 var span = document.getElementsByClassName("close")[0];
+var btnid;
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() { 
-  modal.style.display = "none";
-}
-</script>
-
-	<script>
-<<<<<<< HEAD
-	var modal = document.getElementById('myModal');
-	var btn = document.getElementById("myBtn");
-	var span = document.getElementsByClassName("close")[0];
-	var x;
-	
-	  
-
-function addComment(buttonID,btnno) {
+function addComment(buttonID) {
 	btnid=(buttonID);
-	x=""+buttonID;
-	y=""+btnno;
-	document.getElementById("x");
-	document.getElementById("y");
-
-	
-  modal.style.display = "block";
-  alert(y);
-
-  //*********************************************************
-  
-  
-  
-           
-
-		   
-
-         $.ajax({
-            url:'check',
-            type:'get',
-            data:{name:y},
-            success:function(data){
-               alert(data);
-               $('#').text(responseText); 
-            },
-            
-         }
-    );  
-  
   modal.style.display = "block";
 }
 
 function closePopup(){
-	var a=document.getElementById("popupText").value;
-
-	alert(a);
-
-	  $.ajax({
-
-	            url:'check',
-	            type:'post',
-	            data:{name:a},
-	            success:function(data){
-	               alert(data);
-	               $('#').text(responseText); 
-	            },
-	            
-	         }
-	    ); 
 	var d='<img src="images/check.svg" title="Already Done" style="height: 50px; width: 50px" />';
 	 document.getElementById(btnid).innerHTML =d;
-	  document.getElementById(btnid ).setAttribute( "onClick", "onlyAlert();" );
+	 document.getElementById(btnid).disabled = true;
 	 document.getElementById("popupText").value = "";
 	 modal.style.display = "none";
->>>>>>> 45fcb2f98dad80bc36914087631f0ba7e3b36356
 }
 
 // When the user clicks on <span> (x), close the modal
@@ -3695,7 +3615,7 @@ window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
-
+}
 </script>
 
 <script>
